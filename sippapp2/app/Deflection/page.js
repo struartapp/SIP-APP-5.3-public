@@ -3,8 +3,14 @@
 import Link from 'next/link'
 
 
+
+
+
 export default function validate() {
     const handleCalculate = () => {
+
+    //  let myMap = new Map();
+
 
         // s = document.forms["input_form"]["sterm"].value;
         // p = document.forms["input_form"]["pterm"].value;
@@ -93,7 +99,19 @@ export default function validate() {
 
     };
 
-    
+    function handleClear(){  
+      document.getElementById("Loading").value = "";
+      document.getElementById("depth").value = "";
+      document.getElementById("facet").value = "";
+      document.getElementById("sterm").value = "";
+      document.getElementById("pterm").value = "";
+      document.getElementById("Deflection").value = "";
+      document.getElementById("2SPDeflection").value = "";
+      document.getElementById("REINDeflection").value = "";
+      document.getElementById("REINDeflection2SP").value = "";
+
+    }   
+   
     
 
 
@@ -127,8 +145,8 @@ export default function validate() {
   <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
   <div class="px-6 py-4">
       <form name="input_form" onSubmit={(e) => { e.preventDefault(); handleCalculate(); }}>
-                    <select id="depth" className="font-semibold text-right bg-clip-border bg-gradient-to-b from-slate-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black" onChange={handleCalculate}>
-                    <option value="" disabled selected>Select Depth of SIP Panel, d</option>
+                    <select id="depth" className="font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200" onChange={handleCalculate}>
+                    <option value="" disabled selected>Select Thickness of SIP Panel, d</option>
               
 
          <option value={97.0}>97mm SIPIt Scotland</option>
@@ -151,7 +169,7 @@ export default function validate() {
                      </select>
                      <br /><br />
                     {/* Other input fields and dropdowns */}
-                    <select id="facet" className="font-semibold text-right bg-clip-border bg-gradient-to-b from-slate-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black" onChange={handleCalculate}>
+                    <select id="facet" className="font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200" onChange={handleCalculate}>
         <option value="" disabled selected>Select Face Thickness, t</option>
         <option value={11.0}>11mm SBS / SIPit Scotland</option>
         <option value={12.0}>12mm</option>
@@ -169,7 +187,7 @@ export default function validate() {
   <img class="w-full" src="https://i.postimg.cc/bJRVNskd/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation.jpg" ></img>
   <div class="px-6 py-4">
                     <form name="input_form" onSubmit={(e) => { e.preventDefault(); handleCalculate(); }}>
-                    <select id="Loading" className="font-semibold text-right bg-clip-border bg-gradient-to-b from-slate-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black" onChange={handleCalculate}>
+                    <select id="Loading" className="font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200" onChange={handleCalculate}>
          <option value="" disabled selected>Select Loading</option>
          <option value={0.00}>Select Value</option>
          <option value={80.0}>Lightweight: membrane/standing seam</option>
@@ -197,24 +215,72 @@ export default function validate() {
             <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
   <div class="px-6 py-4">
-    <div className="font-semibold text-center bg-clip-border bg-gradient-to-b from-slate-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black">Panel Span, s (m)
+  <select id="sterm" className="font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200" onChange={handleCalculate}>
+                    <option value="" disabled selected>Select Span of SIP Panel, s</option>
+              
+
+         <option value={0.75}>0.75m</option>
+         <option value={1.00}>1.00m</option>
+         <option value={1.25}>1.25m</option>
+         <option value={1.50}>1.50m</option>
+         <option value={1.75}>1.75m</option>
+         <option value={2.00}>2.00m</option>
+         <option value={2.25}>2.25m</option>
+         <option value={2.50}>2.50m</option>
+         <option value={2.75}>2.75m</option>
+         <option value={3.00}>3.00m</option>
+         <option value={3.25}>3.25m</option>
+         <option value={3.50}>3.50m</option>
+         <option value={3.75}>3.75m</option>
+         <option value={4.00}>4.00m</option>
+         <option value={4.25}>4.25m</option>
+         <option value={4.50}>4.50m</option>
+         <option value={4.75}>4.75m</option>
+         <option value={5.00}>5.00m</option>
+         <option value={5.25}>5.25m</option>
+         <option value={5.50}>5.50m</option>
+         <option value={5.75}>5.75m</option>
+         <option value={6.00}>6.00m</option>
+
+         
+                     </select>
+                     
+                     {/* <div className="font-semibold text-center bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black">Panel Span, s (m)
     </div><br />
-    <input className ="placeholder:text-blue font-semibold text-center bg-clip-border bg-gradient-to-b from-slate-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black" placeholder="span..." type="text"  id="sterm" size="1" required/>
-  <strong><br /><br />
-    <i>(Input Value)</i></strong><i> Span is horizontal distance between supports. <br />A long span is 4m or more.</i><br /><br />
+    <input className ="placeholder:text-blue font-semibold text-center bg-clip-border bg-gradient-to-b from-slate-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black" placeholder="span..." type="text"  id="sterm" size="1" required/> */}
+  <br /><br />
+  <p>Span is the <strong><i>horizontal distance </i></strong>between supports. A long span is 4m or more.</p><br />
 
 
 
+  <select id="pterm" className="font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200" onChange={handleCalculate}>
+                    <option value="" disabled selected>Select Pitch of SIP Panel, p</option>
+              
 
+         <option value={0.00}>0&deg;</option>
+         <option value={5.00}>5&deg;</option>
+         <option value={10.00}>10&deg;</option>
+         <option value={15.00}>15&deg;</option>
+         <option value={20.00}>20&deg;</option>
+         <option value={25.00}>25&deg;</option>
+         <option value={30.00}>30&deg;</option>
+         <option value={35.00}>35&deg;</option>
+         <option value={40.00}>40&deg;</option>
+         <option value={45.00}>45&deg;</option>
+         <option value={50.00}>50&deg;</option>
+         <option value={60.00}>60&deg;</option>
+                    
+                    
+                     </select>
   
  
     
-    <div className="font-semibold text-center bg-clip-border bg-gradient-to-b from-slate-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black"> Roof Pitch Degrees
+    {/* <div className="font-semibold text-center bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black"> Roof Pitch Degrees
     </div><br />
-    <input className ="placeholder:text-blue font-semibold text-center bg-clip-border bg-gradient-to-b from-slate-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black" placeholder="pitch..." type="text"  id="pterm" size="1" required/>
+    <input className ="placeholder:text-blue font-semibold text-center bg-clip-border bg-gradient-to-b from-slate-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black" placeholder="pitch..." type="text"  id="pterm" size="1" required/> */}
   <br /><br />
-    <i><strong>(Input Value)</strong> Pitch is the <strong>roof angle to the horizontal</strong>
-    <br />(e.g 0 degrees is flat/15-30 degrees is low pitch/45-60 degrees is steep pitch)</i>
+    <p>Pitch is the <strong><i>roof angle to the horizontal</i></strong>.
+    <br />(e.g 0&deg; is flat, 15-30&deg; is low pitch and 45-60&deg; is steep pitch)</p>
     </div> </div> <div><br /><br/>
         
   
@@ -224,7 +290,7 @@ export default function validate() {
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
   <div class="px-6 py-4">
 
-    <button className="placeholder:text-blue font-semibold text-center bg-clip-border bg-gradient-to-b from-slate-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1.5 border-black" onClick={handleCalculate}>Calculate Permanent Deflection</button>
+    <button className="placeholder:text-blue font-semibold text-center bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1.5 border-black" onClick={handleClear}>Refresh (Clear)</button>
           
            
             {/* Result output */}
