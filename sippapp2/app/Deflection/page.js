@@ -4,24 +4,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function Validate() {
-    const [results, setResults] = useState({});
+    
 
     const handleCalculate = () => {
         // Your calculation logic here
         // Update the results object with the calculated values
-        // reset results on inputting new values
-        setResults({});
-
-        const calculatedResults = {
-            // Assign your calculated results here
-        };
-        setResults(calculatedResults);
-    };
-
-    function handleCompute() {
-      // Clear input fields and reset the results
-      // You can also reset the results to an empty object here
-      setResults({});
+     
  
 
 
@@ -63,10 +51,10 @@ export default function Validate() {
      const REINDeflection = 1.2 * 5 * WS * Math.pow(LSmm, 4) / 384 / (BEFF * EI / 3.3 / 1000 + EIREIN / 1.8) + WS * Math.pow(LSmm, 2) * (1 + 0.8) / 8 / (100 * (d - 2 * t)) / 690
      const REINDeflection2SP = 0.6 * REINDeflection
      const D2SPAN = 0.6 * Deflection;
-     const DHIGH = "HIGH Try 2 Span Panel";
-     const DHIGH1 = "HIGH Try Reinforced Panel";
-     const DHIGH2 = "HIGH Try 2 Span Reinforced Panel"
-     const D2SPREIN = "HIGH Try shorter Span"
+     const DHIGH = "DEFLECTION TOO HIGH";
+     const DHIGH1 = "DEFLECTION TOO HIGH";
+     const DHIGH2 = "DEFLECTION TOO HIGH";
+     const D2SPREIN = "DEFLECTION TOO HIGH";
 
         // Calculate deflection bending and shear included
         if (Deflection <= l * 1000 / 160 && Deflection <= 15) {
@@ -141,15 +129,15 @@ export default function Validate() {
        
       // <img src="https://i.postimg.cc/ydWm9H5c/231020-Colon-Cover-royal-paperback-APP-IMAGE-2.jpg" alt="Avatar" class="top w-full h-full opacity-5" /></div> */}
 
-<div class=" px-6 py-4 flex">
-      <div class="rounded overflow-hidden  bg-white font-semibold text-center bg-clip-border bg-gradient-to-b p-3 from-blue-200 to-white w-1/4  h-36 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 ">
+<div class=" px-6 py-6 flex">
+      <div class="rounded overflow-hidden  bg-white font-semibold text-center bg-clip-border bg-gradient-to-b p-3 from-blue-200 to-white w-96  h-42 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 ">
      
         {/* <div className=" font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200 "> */}
           <p><strong>STRUCTURALLY INSULATED PANELS (SIPS)<br />
               FLOOR PANEL PERMANENT DEFLECTIONS</strong><br /></p>
               <div><p align = "center"> Enter parameters and calculate deflection, <br />
-              Select Panel thickness (or depth), face thickness.<br />
-              Loading, Span and Pitch - results output below.</p> </div> </div>   </div>
+              Select Panel thickness (depth), <br />face thickness.
+              Loading, Span and Pitch. Results output below.</p> </div> </div>   </div>
           <ul>
             <li>
             <div class="px-6 py-1"> 
@@ -313,21 +301,20 @@ export default function Validate() {
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
   <div class="flex px-6 py-4">
 
-  <button className="placeholder:text-blue font-semibold text-center bg-clip-border bg-gradient-to-b from-blue-200 to-white w-96 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-sky-700 hover:text-white" onClick={handleCompute}>Calculate Deflections</button>
   <button className="placeholder:text-blue font-semibold text-center bg-clip-border bg-gradient-to-b from-red-400 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-sky-700 hover:text-white" onClick={handleClear}>Clear</button>
   </div>
          
  <div class="px-4 py-8">
-  <input className="placeholder:text-red-800  bg-stone-100  border-blue-800 rounded-md w-72 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: SIP splines" type="text" id="Deflection" size={30} /> mm
+  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: SIP splines" type="text" id="Deflection" size={30} /> mm
   <br />Deflection (Single Span)
   <br /><br />
-  <input className="placeholder:text-red-800  bg-stone-100  border-blue-800 rounded-md w-72 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: SIP Splines Multispan" type="text" id="2SPDeflection" size={30} /> mm
+  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: SIP Splines Multispan" type="text" id="2SPDeflection" size={30} /> mm
   <br />Deflection (Two Span or multiple span)
   <br /><br />
-  <input className="placeholder:text-red-800  bg-stone-100  border-blue-800 rounded-md w-72 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: Timber splines" type="text" id="REINDeflection" size={30} /> mm
+  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: Timber splines" type="text" id="REINDeflection" size={30} /> mm
   <br />Reinforced Deflection (Reinforced with solid timber splines in joints)
   <br /><br />
-  <input className="placeholder:text-red-800  bg-stone-100  border-blue-800 rounded-md w-72 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: Timber splines Multispan" type="text" id="REINDeflection2SP" size={30} /> mm
+  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: Timber splines Multispan" type="text" id="REINDeflection2SP" size={30} /> mm
   <br />Reinforced Deflection (Two Span or Multiple Span &amp; Reinforced with solid timber splines in joints)
 
 
