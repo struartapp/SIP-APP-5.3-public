@@ -1,13 +1,30 @@
 'use client'
 
-import Link from 'next/link'
+import React, { useState } from 'react';
+import Link from 'next/link';
 
+export default function Validate() {
+    const [results, setResults] = useState({});
 
-
-
-
-export default function validate() {
     const handleCalculate = () => {
+        // Your calculation logic here
+        // Update the results object with the calculated values
+        // reset results on inputting new values
+        setResults({});
+
+        const calculatedResults = {
+            // Assign your calculated results here
+        };
+        setResults(calculatedResults);
+    };
+
+    function handleCompute() {
+      // Clear input fields and reset the results
+      // You can also reset the results to an empty object here
+      setResults({});
+ 
+
+
 
     //  let myMap = new Map();
 
@@ -82,20 +99,17 @@ export default function validate() {
         // Display the result
         
          // Display the results
-    // document.getElementById("resultAcG").textContent = `ACG: ${AcG}`;
-    // document.getElementById("resultEI").textContent = `EI: ${EI}`;
-    // document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN}`;
-    // document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm}`;
-    // document.getElementById("resultWS").textContent = `WS: ${WS}`;
-    // document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF}`;
-    // document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection}`;
-    // document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection}`;
-    // document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP}`;
-    // document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN}`;
-    // document.getElementById("resultDHIGH").textContent = DHIGH;
-    // document.getElementById("resultDHIGH1").textContent = DHIGH1;
-    // document.getElementById("resultDHIGH2").textContent = DHIGH2;
-    // document.getElementById("resultD2SPREIN").textContent = D2SPREIN;
+      // document.getElementById("depth").value = `depth: ${AcG.toFixed(2)}`
+      document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
+    document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
+    document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
+    document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
+    document.getElementById("resultWS").textContent = `WS: ${WS.toFixed(2)}`;
+    document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF.toFixed(2)}`;
+    document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection.toFixed(2)}`;
+    document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection.toFixed(2)}`;
+    document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
+    document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
 
     };
 
@@ -124,30 +138,35 @@ export default function validate() {
         <main>
         
         {/* // <link rel="stylesheet" href="style.css" />
-        // <img src="https://i.postimg.cc/ydWm9H5c/231020-Colon-Cover-royal-paperback-APP-IMAGE-2.jpg" alt="Avatar" class="top w-full h-full opacity-5" /></div> */}
-        <div className=" text-center bg-clip-border bg-gradient-to-t from-slate-200 to-white w-96 h-36 rounded-sd shadow-xl shadow-blue-950/50 border- border-blue-600 ">
-          <br /><p><strong>&nbsp;&nbsp;STRUCTURALLY INSULATED PANELS (SIPS)<br />
-              &nbsp;&nbsp;FLOOR PANEL PERMANENT DEFLECTIONS</strong><br />
-              &nbsp;&nbsp;Enter parameters and calculate deflection, <br />
-              &nbsp;&nbsp;By clicking CALCULATE button.</p> <br /><br />    </div><br />
-            
+       
+      // <img src="https://i.postimg.cc/ydWm9H5c/231020-Colon-Cover-royal-paperback-APP-IMAGE-2.jpg" alt="Avatar" class="top w-full h-full opacity-5" /></div> */}
+
+<div class=" px-6 py-4 flex">
+      <div class="rounded overflow-hidden  bg-white font-semibold text-center bg-clip-border bg-gradient-to-b p-3 from-blue-200 to-white w-1/4  h-36 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 ">
+     
+        {/* <div className=" font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200 "> */}
+          <p><strong>STRUCTURALLY INSULATED PANELS (SIPS)<br />
+              FLOOR PANEL PERMANENT DEFLECTIONS</strong><br /></p>
+              <div><p align = "center"> Enter parameters and calculate deflection, <br />
+              Select Panel thickness (or depth), face thickness.<br />
+              Loading, Span and Pitch - results output below.</p> </div> </div>   </div>
           <ul>
             <li>
-            < div className="w-24 rounded overflow-hidden  bg-white shadow-xl shadow-blue-950/50 border-1 border-black "> 
-            <Link href="/">Home Page</Link> </div>
+            <div class="px-6 py-1"> 
+            < div className="w-24 rounded overflow-hidden font-semibold text-center bg-gradient-to-t from-slate-200 to-white h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500  "> 
+            <Link href="/">Home Page</Link> </div></div>
          </li>
             </ul>
            
 <br />
   
-          
-            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-  <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
   <div class="px-6 py-4">
+            <div class="max-w-sm rounded overflow-hidden  bg-white  border-blue-500 shadow-xl shadow-blue-950/50 border-2 ">
+  <img class="w-full " src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
+ 
       <form name="input_form" onSubmit={(e) => { e.preventDefault(); handleCalculate(); }}>
-                    <select id="depth" className="font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200" onChange={handleCalculate}>
-                    <option value="" disabled selected>Select Thickness of SIP Panel, d</option>
-              
+      <select id="depth" className="relative left-2 bottom-3 font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6" onChange={handleCalculate}>
+        <option value="" disabled selected>Select Thickness (depth) of SIP Panel, d</option>
 
          <option value={97.0}>97mm SIPIt Scotland</option>
          <option value={100.0}>100mm</option>
@@ -169,7 +188,7 @@ export default function validate() {
                      </select>
                      <br /><br />
                     {/* Other input fields and dropdowns */}
-                    <select id="facet" className="font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200" onChange={handleCalculate}>
+                    <select id="facet" className="relative left-2 bottom-3 font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6" onChange={handleCalculate}>
         <option value="" disabled selected>Select Face Thickness, t</option>
         <option value={11.0}>11mm SBS / SIPit Scotland</option>
         <option value={12.0}>12mm</option>
@@ -183,27 +202,29 @@ export default function validate() {
 
 
                     <br /><br />
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+            <div class = "pl-6" >       
+            <div class="max-w-sm rounded overflow-hidden  bg-white  border-blue-500 shadow-xl shadow-blue-950/50 border-2 ">
   <img class="w-full" src="https://i.postimg.cc/bJRVNskd/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation.jpg" ></img>
-  <div class="px-6 py-4">
+  <div class="relative right-2 px-6 py-4">
                     <form name="input_form" onSubmit={(e) => { e.preventDefault(); handleCalculate(); }}>
-                    <select id="Loading" className="font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200" onChange={handleCalculate}>
+                    <select id="Loading" className="relative left-2 bottom-3 font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6" onChange={handleCalculate}>
          <option value="" disabled selected>Select Loading</option>
-         <option value={0.00}>Select Value</option>
-         <option value={80.0}>Lightweight: membrane/standing seam</option>
-         <option value={120.0}>Medium: Slate tiles/sedum 40mm roll</option>
-         <option value={140.0}>Heavyweight: clay tiles/concrete tiles</option>
+         <option value={80.0}>Light: 80kg/m² Membrane/standing seam</option>
+         <option value={120.0}>Medium: 120kg/m² Slate tiles/sedum 40mm roll</option>
+         <option value={140.0}>Heavy: 140kg/m² Clay tiles/concrete tiles</option>
+         <option value={225.0}>Green Roof: 225kg/m² Ply with 150kg/m² green roof</option>
     </select>
-    </form></div>
-    <div>
+    </form>
+ 
     <i><strong>Input roof panel loading from options</strong></i>&nbsp;
-  <br /> ● (80kg/m² - lightweight e.g. standing seam/membrane
-  <br /> ● 120kg/m² - medium e.g. slate tiles
-  <br /> ● 140kg/m² - heavyweight e.g. clay/concrete tiles)
+  <br /> ● 80kg/m² - Lightweight e.g. standing seam/membrane
+  <br /> ● 120kg/m² - Medium: slate tiles
+  <br /> ● 140kg/m² - Heavy: clay/concrete tiles/40mm sedum
+  <br /> ● 225kg/m² - Green Roof system & 18mm MDP Ply
   <br /> <br />Live or imposed load for roofs is<strong> not added</strong> for this long term loading check.
   For OSB SIP panels on roofs the short term strength is generally not an issue, except in areas with high snow load.
   Or roofs with access for maintenance may need higher live loads to be considered. This would need checks by a structural engineer.<p />
-  </div>
+  </div></div> 
   <div>
     
   </div>
@@ -212,10 +233,11 @@ export default function validate() {
              
     
             <br />
-            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+            <div class ="pl-6">
+            <div class="max-w-sm rounded overflow-hidden  bg-white  border-blue-500 shadow-xl shadow-blue-950/50 border-2 ">
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
   <div class="px-6 py-4">
-  <select id="sterm" className="font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200" onChange={handleCalculate}>
+  <select id="sterm" className="font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6" onChange={handleCalculate}>
                     <option value="" disabled selected>Select Span of SIP Panel, s</option>
               
 
@@ -253,7 +275,7 @@ export default function validate() {
 
 
 
-  <select id="pterm" className="font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1 border-black hover:bg-orange-200" onChange={handleCalculate}>
+  <select id="pterm" className="font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6 "  onChange={handleCalculate}>
                     <option value="" disabled selected>Select Pitch of SIP Panel, p</option>
               
 
@@ -281,42 +303,21 @@ export default function validate() {
   <br /><br />
     <p>Pitch is the <strong><i>roof angle to the horizontal</i></strong>.
     <br />(e.g 0&deg; is flat, 15-30&deg; is low pitch and 45-60&deg; is steep pitch)</p>
-    </div> </div> <div><br /><br/>
+    </div></div> </div> <div><br /><br/>
         
   
                      
         <div>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <div class ="pl-6">
+        <div class="max-w-sm rounded overflow-hidden  bg-white  border-blue-500 shadow-xl shadow-blue-950/50 border-2 ">
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
-  <div class="px-6 py-4">
+  <div class="flex px-6 py-4">
 
-    <button className="placeholder:text-blue font-semibold text-center bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-1.5 border-black" onClick={handleClear}>Refresh (Clear)</button>
-          
-           
-            {/* Result output */}
-            {/* <div id="results">
-                <div id="resultAcG"></div>
-                <div id="resultEI"></div>
-                <div id="resultEIREIN"></div>
-                <div id="resultLSmm"></div>
-                <div id="resultWS"></div>
-                <div id="resultBEFF"></div>
-                <div id="resultDeflection"></div>
-                <div id="resultREINDeflection"></div>
-                <div id="resultREINDeflection2SP"></div>
-                <div id="resultD2SPAN"></div>
-                <div id="resultDHIGH"></div>
-                <div id="resultDHIGH1"></div>
-                <div id="resultDHIGH2"></div>
-                <div id="resultD2SPREIN"></div>
-            </div> */}
-            </div>
-        <br />
-  
-  {/* <button onclick="validate" className="bold text-center text-slate block bg-orange-400 rounded-md pl-9 pr-3 shadow-xl shadow-blue-950/50 border-1 border-black text-slate-950">
-    <a className="one">Calculate Permanent Deflection</a><br />
-  </button> */}
- 
+  <button className="placeholder:text-blue font-semibold text-center bg-clip-border bg-gradient-to-b from-blue-200 to-white w-96 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-sky-700 hover:text-white" onClick={handleCompute}>Calculate Deflections</button>
+  <button className="placeholder:text-blue font-semibold text-center bg-clip-border bg-gradient-to-b from-red-400 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-sky-700 hover:text-white" onClick={handleClear}>Clear</button>
+  </div>
+         
+ <div class="px-4 py-8">
   <input className="placeholder:text-red-800  bg-stone-100  border-blue-800 rounded-md w-72 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: SIP splines" type="text" id="Deflection" size={30} /> mm
   <br />Deflection (Single Span)
   <br /><br />
@@ -328,10 +329,32 @@ export default function validate() {
   <br /><br />
   <input className="placeholder:text-red-800  bg-stone-100  border-blue-800 rounded-md w-72 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: Timber splines Multispan" type="text" id="REINDeflection2SP" size={30} /> mm
   <br />Reinforced Deflection (Two Span or Multiple Span &amp; Reinforced with solid timber splines in joints)
-  
+
+
   </div></div></div>
 
 
+            {/* Result output */}
+            <p>  Result output</p>
+            <div id="results">
+                <div id="resultAcG"></div>
+                <div id="resultEI"></div>
+                <div id="resultEIREIN"></div>
+                <div id="resultLSmm"></div>
+                <div id="resultWS"></div>
+                <div id="resultBEFF"></div>
+                <div id="resultDeflection"></div>
+                <div id="resultD2SPAN"></div>
+                <div id="resultREINDeflection"></div>
+                <div id="resultREINDeflection2SP"></div>
+                <div id="resultDHIGH"></div>
+                <div id="resultDHIGH1"></div>
+                <div id="resultDHIGH2"></div>
+                <div id="resultD2SPREIN"></div>
+            </div>
+            
+            </div></div>
+        <br />
         </main>
     );
 }
