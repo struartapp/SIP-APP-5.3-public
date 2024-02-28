@@ -96,7 +96,7 @@ export default function App () {
 
 
   <br /><div class = "pl-6" >       
-            <div class="max-w-sm rounded overflow-hidden p-3 bg-gradient-to-b  from-white to-yellow-200 w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800">
+            <div class="max-w-sm rounded overflow-hidden p-3 bg-gradient-to-b  from-white to-red-200 w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <p><br /> <strong>DISCLAIMER:</strong>
 
   The calculations are based on conservative assumptions, on panels with Polyurethane foam cores (PUR); 
