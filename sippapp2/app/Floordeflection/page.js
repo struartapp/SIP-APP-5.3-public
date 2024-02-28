@@ -4,24 +4,10 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function Validate() {
-    
+  const [allSelected, setAllSelected] = useState(false);
 
     const handleCalculate = () => {
-        // Your calculation logic here
-        // Update the results object with the calculated values
-
-
-
-
-    //  let myMap = new Map();
-
-
-        // s = document.forms["input_form"]["sterm"].value;
-        // p = document.forms["input_form"]["pterm"].value;
-        
-        // const s = document.getElementById('sterm').value;
-        // const p = document.getElementById('pterm').value;
-
+      
         const l = parseFloat(document.getElementById("Loading").value);
         const d = parseFloat(document.getElementById("depth").value);
         const t = parseFloat(document.getElementById("facet").value);
@@ -32,6 +18,13 @@ export default function Validate() {
         // d = document.forms["input_form"]["depth"].value;
         // t = document.forms["input_form"]["facet"].value;
 
+     
+          // Check if any of the input values are zero
+      if (d === 0 || t === 0 || l === 0 || s === 0) {
+        // If any input value is zero, set allSelected state to true
+       setAllSelected(true);
+      return;
+      }
         
       
       const AcG = 2.3 * 1000 * (d - 2 * t)
@@ -46,10 +39,10 @@ export default function Validate() {
      const REINDeflection = 1.2 * 5 * WS * Math.pow(LSmm, 4) / 384 / (BEFF * EI / 3.3 / 1000 + EIREIN / 1.8) + WS * Math.pow(LSmm, 2) * (1 + 0.8) / 8 / (100 * (d - 2 * t)) / 690;
      const REINDeflection2SP = 0.6 * REINDeflection;
      const D2SPAN = 0.6 * Deflection;
-     const DHIGH = "DEFLECTION TOO HIGH";
-     const DHIGH1 = "DEFLECTION TOO HIGH";
-     const DHIGH2 = "DEFLECTION TOO HIGH";
-     const D2SPREIN = "DEFLECTION TOO HIGH";
+     const DHIGH = "PANEL INADEQUATE";
+     const DHIGH1 = "PANEL INADEQUATE";
+     const DHIGH2 = "PANEL INADEQUATE";
+     const D2SPREIN = "PANEL INADEQUATE";
      const DFST =  5 * WSST * Math.pow(LSmm, 4) / 384 / EI +  WSST * Math.pow(LSmm, 2) / 8 / AcG;
      const REINDFST = 1.2 * 5 * WS * Math.pow(LSmm, 4) / 384 / (BEFF * EI / 1000 + EIREIN / 1.8) + WS * Math.pow(LSmm, 2) / 8 / (100 * (d - 2 * t)) / 690;
      const DFST2SP = 0.6 * DFST;
@@ -58,6 +51,8 @@ export default function Validate() {
 
     //  const Defshortterm =  5 * WS * Math.pow(LSmm, 4) / 384 / EI +   WS * Math.pow(LSmm, 2) / 8 / AcG;
     //  const REINDefshortterm = 1.2 * 5 * WS * Math.pow(LSmm, 4) / 384 / (BEFF * EI / 1000 + EIREIN / 1.8) + WS * Math.pow(LSmm, 2) * 1 / 8 / (100 * (d - 2 * t)) / 690;
+
+   
 
         // Calculate deflection bending and shear included
         if (Deflection <= l * 1000 / 160 && Deflection <= 15 && DFST <=8 ) {
@@ -93,30 +88,34 @@ export default function Validate() {
             document.getElementById("REINDeflection2SP").value = D2SPREIN;
           } 
                 
+
+           setAllSelected(false);
+  };
+
         // Display the result
         
          // Display the results
       // document.getElementById("depth").value = `depth: ${AcG.toFixed(2)}`
-    document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
-    document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
-    document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
-    document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
-    document.getElementById("resultWS").textContent = `WS: ${WS.toFixed(2)}`;
-    document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF.toFixed(2)}`;
-    // document.getElementById("resultSHD").textContent = `SHD: ${SHD.toFixed(2)}`;
-    document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection.toFixed(2)}`;
-    document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection.toFixed(2)}`;
-    document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
-    document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
+    // document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
+    // document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
+    // document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
+    // document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
+    // document.getElementById("resultWS").textContent = `WS: ${WS.toFixed(2)}`;
+    // document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF.toFixed(2)}`;
+    // // document.getElementById("resultSHD").textContent = `SHD: ${SHD.toFixed(2)}`;
+    // document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection.toFixed(2)}`;
+    // document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection.toFixed(2)}`;
+    // document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
+    // document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
 
-    document.getElementById("resultDFST").textContent = `DFST: ${DFST.toFixed(2)}`;
-    document.getElementById("resultREINDFST").textContent = `REINDFST: ${REINDFST.toFixed(2)}`;
-    document.getElementById("resultDFST2SP").textContent = `DFST2SP: ${DFST2SP.toFixed(2)}`;
-    document.getElementById("resultREINDFST2SP").textContent = `REINDFST2SP: ${REINDFST2SP.toFixed(2)}`;
+    // document.getElementById("resultDFST").textContent = `DFST: ${DFST.toFixed(2)}`;
+    // document.getElementById("resultREINDFST").textContent = `REINDFST: ${REINDFST.toFixed(2)}`;
+    // document.getElementById("resultDFST2SP").textContent = `DFST2SP: ${DFST2SP.toFixed(2)}`;
+    // document.getElementById("resultREINDFST2SP").textContent = `REINDFST2SP: ${REINDFST2SP.toFixed(2)}`;
     // document.getElementById("resultDefshortterm").textContent = `Defshortterm: ${Defshortterm.toFixed(2)}`;
     // document.getElementById("resultREINDefshortterm").textContent = `REINDefshortterm: ${REINDefshortterm.toFixed(2)}`;
 
-    };
+   
 
     function handleClear(){  
       document.getElementById("Loading").value = "";
@@ -316,7 +315,7 @@ export default function Validate() {
 
 
             {/* Result output */}
-            <p>  Result output</p>
+            {/* <p>  Result output</p>
             <div id="results">
                 <div id="resultAcG"></div>
                 <div id="resultEI"></div>
@@ -336,7 +335,7 @@ export default function Validate() {
                 <div id="resultREINDFST"></div>
                 <div id="resultDFST2SP"></div>
                 <div id="resultREINDFST2SP"></div>
-            </div>
+            </div> */}
             
             </div></div>
         <br />
