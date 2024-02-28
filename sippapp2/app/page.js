@@ -62,25 +62,34 @@ export default function App () {
  <br />
   <p><strong>PARAMETERS:</strong> Parameters needed for inputting into the calculation sheet are:<br /><br />
   ● Panel Thickness in mm <br />
-   &nbsp;&nbsp; <i>Manufacturer specific (e.g. Kingspan panel 142mm thick)</i><br /><br />
+   &nbsp;&nbsp;&nbsp; <i>Manufacturer specific <br />
+   &nbsp;&nbsp;(e.g. Kingspan panel 142mm thick)</i><br /><br />
   ● Face Thickness in mm <br />
- &nbsp;&nbsp; <i>Manufacturer specific (e.g. Kingspan panel 142mm thick)</i><br /><br />
+ &nbsp;&nbsp; <i>Manufacturer specific <br />
+ &nbsp;&nbsp;(e.g. Kingspan panel 15mm thick)</i><br /><br />
   ● Panel Span in m <br />
-    &nbsp;&nbsp; <i>This is the horizontal distance between supporting walls or beams/purlins </i><br /><br />
+    &nbsp;&nbsp; <i>This is the horizontal distance between <br />
+    &nbsp;&nbsp; supporting walls or beams/purlins </i><br /><br />
   ● Pitch <br />
-  &nbsp;&nbsp; <i>This is the slope or angle of a panel to the horizontal</i><br /><br />
+  &nbsp;&nbsp; <i>Roof panels: the slope or angle of a panel.  <br />
+  &nbsp;&nbsp; Inclined to the horizontal. </i><br /><br />
   ● Loading in kg/m² <br />
-  &nbsp;&nbsp; <i>Total of built up components: SIP panel, cladding and internal finishes</i><br />
+  &nbsp;&nbsp; <i>Total of built up components: <br />
+  &nbsp;&nbsp;SIP panel, cladding and internal finishes</i><br />
  </p></div></div>
 <br />    
   
 <div class = "pl-6" >       
             <div class="max-w-sm rounded overflow-hidden p-3  bg-gradient-to-b  from-white to-yellow-200 w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <br />
-  <p><strong>CALCULATION:</strong>  Find resulting deflections by clicking 'Calculate Permanent Deflection'.<br /><br />
-  <i>If the following criteria are not met, the calculated deflection is not shown:<br /><br /></i>
-   ● Deflection is greater than a ratio determined from:<br />&nbsp;&nbsp; 
-   Span/deflection greater than a value of 250 (the limit to avoid plaster cracking)<br /><br />
+  <p><strong>CALCULATION:</strong>  Find resulting deflections by selecting input values.<br /><br />
+  <i>If the following criteria are not met, or input values are missing, 
+  the calculated deflection<br /> is shown as 
+  "PANEL INADEQUATE" <br /><br /></i>
+   ● Deflection is greater than a ratio<br />
+   &nbsp;&nbsp; determined from: Span/deflection <br />
+   &nbsp;&nbsp; greater than a value of 250 <br />
+   &nbsp;&nbsp; (the limit to avoid plaster cracking).<br /><br />
   ● Deflection is greater than 15mm:<br />&nbsp;&nbsp; 
   Rule of thumb value based on experience</p><br /><br />
   </div></div>
