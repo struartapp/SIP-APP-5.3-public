@@ -143,7 +143,7 @@ export default function Validate() {
        
       // <img src="https://i.postimg.cc/ydWm9H5c/231020-Colon-Cover-royal-paperback-APP-IMAGE-2.jpg" alt="Avatar" class="top w-full h-full opacity-5" /></div> */}
 
-<div class=" px-6 py-6 flex">
+<div class=" px-6 py-6 flex justify-center">
 <div class="rounded overflow-hidden text-center  bg-clip-border bg-gradient-to-b p-3 from-yellow-200 to-white w-96 h-42 rounded-sd shadow-xl shadow-yellow-600 border-8 border-x-2 border-orange-800" style={{
     fontSize: '17px',   }} >     
           <p><strong>STRUCTURALLY INSULATED PANELS (SIPS)<br />
@@ -154,7 +154,7 @@ export default function Validate() {
               loading, and span. Results output below.</p> </div> </div>   </div>
           <ul>
             <li>
-            <div class="px-6 py-1"> 
+            <div class="px-6 py-1 flex justify-center"> 
             < div className="w-24 rounded overflow-hidden font-semibold text-center bg-gradient-to-t from-blue-200 to-white h-7 rounded-sd shadow-xl shadow-yellow-600 border-2  border-orange-800 "> 
             <Link href="/">Home Page</Link> </div></div>
          </li>
@@ -162,7 +162,7 @@ export default function Validate() {
            
 <br />
   
-  <div class="px-6 py-4">
+  <div class="px-6 py-4 flex justify-center">
             <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-200 to-white w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
   <img class="w-full " src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
  
@@ -204,7 +204,7 @@ export default function Validate() {
 
 
                     <br /><br />
-            <div class = "pl-6" >       
+            <div class = "flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden  bg-white   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full" src="https://i.postimg.cc/L8J6yhMs/240228-floor-panel-32-32.jpg" ></img>
   <div class="relative right-2 px-6 py-4">
@@ -235,7 +235,7 @@ export default function Validate() {
              
     
             <br />
-            <div class ="pl-6">
+            <div class ="flex justify-center">
             <div class="max-w-sm rounded overflow-hidden  bg-white   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
   <div class="px-6 py-4">
@@ -289,7 +289,7 @@ export default function Validate() {
   
                      
         <div>
-        <div class ="pl-6">
+        <div class ="flex justify-center">
         <div class="max-w-sm rounded overflow-hidden  bg-white  0 shadow-xl shadow-yellow-600 border-2 border-orange-800">
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
   <div class="flex px-6 py-4">

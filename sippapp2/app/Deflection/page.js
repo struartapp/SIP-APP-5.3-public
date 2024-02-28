@@ -88,16 +88,16 @@ export default function Validate() {
         
          // Display the results
       // document.getElementById("depth").value = `depth: ${AcG.toFixed(2)}`
-      document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
-    document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
-    document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
-    document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
-    document.getElementById("resultWS").textContent = `WS: ${WS.toFixed(2)}`;
-    document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF.toFixed(2)}`;
-    document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection.toFixed(2)}`;
-    document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection.toFixed(2)}`;
-    document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
-    document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
+    //   document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
+    // document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
+    // document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
+    // document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
+    // document.getElementById("resultWS").textContent = `WS: ${WS.toFixed(2)}`;
+    // document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF.toFixed(2)}`;
+    // document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection.toFixed(2)}`;
+    // document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection.toFixed(2)}`;
+    // document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
+    // document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
 
     };
 
@@ -129,7 +129,7 @@ export default function Validate() {
        
       // <img src="https://i.postimg.cc/ydWm9H5c/231020-Colon-Cover-royal-paperback-APP-IMAGE-2.jpg" alt="Avatar" class="top w-full h-full opacity-5" /></div> */}
 
-<div class=" px-6 py-6 flex">
+<div class=" px-6 py-6 flex justify-center">
 <div class="rounded overflow-hidden text-center  bg-clip-border bg-gradient-to-b p-3 from-yellow-200 to-white w-96 h-42 rounded-sd shadow-xl shadow-yellow-600 border-8 border-x-2 border-orange-800" style={{
     fontSize: '17px',   }} >     
           <p><strong>STRUCTURALLY INSULATED PANELS (SIPS)<br />
@@ -140,7 +140,7 @@ export default function Validate() {
               loading, span and pitch. Results output below.</p> </div> </div>   </div>
           <ul>
             <li>
-            <div class="px-6 py-1"> 
+            <div class="px-6 py-1 flex justify-center"> 
             < div className="w-24 rounded overflow-hidden font-semibold text-center bg-gradient-to-t from-blue-200 to-white h-7 rounded-sd shadow-xl shadow-yellow-600 border-2  border-orange-800 "> 
             <Link href="/">Home Page</Link> </div></div>
          </li>
@@ -148,7 +148,7 @@ export default function Validate() {
            
 <br />
   
-  <div class="px-6 py-4">
+  <div class="px-6 py-4 flex justify-center">
             <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-200 to-white w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
   <img class="w-full " src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
  
@@ -190,7 +190,7 @@ export default function Validate() {
 
 
                     <br /><br />
-            <div class = "pl-6" >       
+            <div class = " flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden  bg-white   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full" src="https://i.postimg.cc/bJRVNskd/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation.jpg" ></img>
   <div class="relative right-2 px-6 py-4">
@@ -221,7 +221,7 @@ export default function Validate() {
              
     
             <br />
-            <div class ="pl-6">
+            <div class =" flex justify-center">
             <div class="max-w-sm rounded overflow-hidden  bg-white   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
   <div class="px-6 py-4">
@@ -296,7 +296,7 @@ export default function Validate() {
   
                      
         <div>
-        <div class ="pl-6">
+        <div class ="flex justify-center">
         <div class="max-w-sm rounded overflow-hidden  bg-white  0 shadow-xl shadow-yellow-600 border-2 border-orange-800">
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
   <div class="flex px-6 py-4">
@@ -321,7 +321,7 @@ export default function Validate() {
   </div></div></div>
 
 
-            {/* Result output */}
+            {/* Result output
             <p>  Result output</p>
             <div id="results">
                 <div id="resultAcG"></div>
@@ -338,7 +338,7 @@ export default function Validate() {
                 <div id="resultDHIGH1"></div>
                 <div id="resultDHIGH2"></div>
                 <div id="resultD2SPREIN"></div>
-            </div>
+            </div> */}
             
             </div></div>
         <br />

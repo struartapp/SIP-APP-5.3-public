@@ -8,26 +8,35 @@ export default function App () {
     <main>
 
 
-<div class=" px-6 py-6 flex">
+<div class=" px-6 py-6 flex justify-center ">
 
-<div class="rounded overflow-hidden text-center  bg-clip-border bg-gradient-to-b p-2 from-yellow-200 to-white w-96 h-42 rounded-sd shadow-xl shadow-yellow-600 border-8 border-x-2 border-orange-800" style={{
+<div class="rounded overflow-hidden text-center  bg-clip-border bg-gradient-to-b p-6 from-yellow-200 to-white w-96 h-42 rounded-sd shadow-xl shadow-yellow-600 border-8 border-x-2 border-orange-800" style={{
     fontSize: '17px',   }} >     
     
-    <img class="w-full opacity-50" src="https://i.postimg.cc/3w0H19tW/240228-Colon-Cover-royal-app-cover.jpg" ></img>
+    <img class="w-full opacity-75" src="https://i.postimg.cc/3w0H19tW/240228-Colon-Cover-royal-app-cover.jpg" ></img>
     <br />        <p>   &nbsp;&nbsp;<strong>STRUCTURALLY INSULATED PANELS<br /> <br />
          UNIVERSAL SELECTION APP FOR 'SIPS' <br />
          ROOF AND FLOOR PANELS  <br /> <br />
-          For end-users, architects and estimators, <br />
-         not requiring structural knowledge.
-        </strong></p> </div>   </div>
+          For end-users, architects and estimators, 
+         without structural knowledge.<br /><br />
+         <i>App design: Hugh Morrison </i>
+         
+        </strong></p> 
+        <ul>
+          <li>
+            <div class ="text-red-600 font-bold">
+          <Link href="https://struartapp.com/">www.struartapp.com</Link></div>
+          </li>
+         </ul>
+         </div>   </div>
           <ul>
             <li>
-            <div class="px-6 py-1"> 
+            <div class="px-6 py-1 flex justify-center"> 
             < div className="w-48 rounded overflow-hidden font-semibold text-center bg-gradient-to-t from-blue-200 to-white h-7 rounded-sd shadow-xl shadow-yellow-600 border-2  border-orange-800 "> 
             <Link href="/Deflection">Roof Panel Selection</Link> </div></div>
          </li>
          <li>
-            <div class="px-6 py-1"> 
+            <div class="px-6 py-1 flex justify-center"> 
             < div className="w-48 rounded overflow-hidden font-semibold text-center bg-gradient-to-t from-blue-200 to-white h-7 rounded-sd shadow-xl shadow-yellow-600 border-2  border-orange-800 "> 
             <Link href="/Floordeflection">Floor Panel Selection</Link> </div></div>
          </li>
@@ -37,7 +46,7 @@ export default function App () {
 
 
 
-            <div class = "pl-6" >       
+            <div class = "flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3 bg-gradient-to-b  from-white to-yellow-200 w-96 shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full opacity-50" src="https://i.postimg.cc/SxPPSv9d/app-background.jpg" ></img>
  
@@ -47,7 +56,7 @@ export default function App () {
     This will include all elements which make up the component: SIP panel self weight, battens, cladding and internal skimmed plasterboard, or other, finishes. <br />
     </p></div></div> 
   
-    <br /><div class = "pl-6" >       
+    <br /><div class = "flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3  bg-gradient-to-b from-white to-yellow-200  w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full " src="https://i.postimg.cc/bJRVNskd/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation.jpg" ></img>
  <br />
@@ -56,7 +65,7 @@ export default function App () {
   factor in the structural action of SIPs roof panels, and generally on floors, is the permanent sag under the action of self weight.<br />    </div></div>
 
   
-  <br /> <div class = "pl-6" >       
+  <br /> <div class = "flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3  bg-gradient-to-b  from-white to-yellow-200 w-96  shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full " src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
  <br />
@@ -79,7 +88,7 @@ export default function App () {
  </p></div></div>
 <br />    
   
-<div class = "pl-6" >       
+<div class = "flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3  bg-gradient-to-b  from-white to-yellow-200 w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <br />
   <p><strong>CALCULATION:</strong>  Find resulting deflections by selecting input values.<br /><br />
@@ -95,7 +104,7 @@ export default function App () {
   </div></div>
 
 
-  <br /><div class = "pl-6" >       
+  <br /><div class = " flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3 bg-gradient-to-b  from-white to-red-200 w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <p><br /> <strong>DISCLAIMER: </strong>
 
