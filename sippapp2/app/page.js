@@ -44,8 +44,14 @@ export default function App () {
            
 <br />
 
+<div class = "flex justify-center" >       
+            <div class="max-w-sm h-13 text-center rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-200 w-48 shadow-xl shadow-yellow-600 border-2 border-orange-800">
 
+  <br />
+  <p><strong>Click buttons ABOVE.</strong> <br /><i>To navigate between pages. <br /></i></p> <br />
+   </div></div>  <br />
 
+           
             <div class = "flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3 bg-gradient-to-b  from-white to-yellow-200 w-96 shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full opacity-50" src="https://i.postimg.cc/SxPPSv9d/app-background.jpg" ></img>

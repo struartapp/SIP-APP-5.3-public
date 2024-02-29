@@ -51,10 +51,10 @@ export default function Validate() {
      const REINDeflection = 1.2 * 5 * WS * Math.pow(LSmm, 4) / 384 / (BEFF * EI / 3.3 / 1000 + EIREIN / 1.8) + WS * Math.pow(LSmm, 2) * (1 + 0.8) / 8 / (100 * (d - 2 * t)) / 690
      const REINDeflection2SP = 0.6 * REINDeflection
      const D2SPAN = 0.6 * Deflection;
-     const DHIGH = "DEFLECTION TOO HIGH";
-     const DHIGH1 = "DEFLECTION TOO HIGH";
-     const DHIGH2 = "DEFLECTION TOO HIGH";
-     const D2SPREIN = "DEFLECTION TOO HIGH";
+     const DHIGH = "PANEL INADEQUATE";
+     const DHIGH1 = "PANEL INADEQUATE";
+     const DHIGH2 = "PANEL INADEQUATE";
+     const D2SPREIN = "PANEL INADEQUATE";
 
         // Calculate deflection bending and shear included
         if (Deflection <= l * 1000 / 160 && Deflection <= 15) {
@@ -137,12 +137,17 @@ export default function Validate() {
               <br />
               <div><p align = "center"> Enter parameters and calculate deflection. 
               Select Panel thickness (depth), face thickness,
-              loading, span and pitch. Results output below.</p> </div> </div>   </div>
+              loading, span and pitch. Results output below. <i>To navigate between pages <strong>click buttons below.</strong></i></p> </div> </div>   </div>
           <ul>
             <li>
             <div class="px-6 py-1 flex justify-center"> 
             < div className="w-24 rounded overflow-hidden font-semibold text-center bg-gradient-to-t from-blue-200 to-white h-7 rounded-sd shadow-xl shadow-yellow-600 border-2  border-orange-800 "> 
             <Link href="/">Home Page</Link> </div></div>
+         </li>
+         <li>
+            <div class="px-6 py-1 flex justify-center"> 
+            < div className="w-48 rounded overflow-hidden font-semibold text-center bg-gradient-to-t from-blue-200 to-white h-7 rounded-sd shadow-xl shadow-yellow-600 border-2  border-orange-800 "> 
+            <Link href="/Floordeflection">Floor Panel Selection</Link> </div></div>
          </li>
             </ul>
            
@@ -192,6 +197,7 @@ export default function Validate() {
                     <br /><br />
             <div class = " flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden  bg-white   shadow-xl shadow-yellow-600 border-2 border-orange-800">
+  {/* <img class="w-full" src="https://i.postimg.cc/bJRVNskd/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation.jpg" ></img> */}
   <img class="w-full" src="https://i.postimg.cc/bJRVNskd/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation.jpg" ></img>
   <div class="relative right-2 px-6 py-4">
                     <form name="input_form" onSubmit={(e) => { e.preventDefault(); handleCalculate(); }}>
@@ -226,7 +232,7 @@ export default function Validate() {
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
   <div class="px-6 py-4">
   <select id="sterm" className="font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6" onChange={handleCalculate}>
-                    <option value="" disabled selected>Select Span of SIP Panel, s</option>
+                    <option value="" disabled selected>Select Span of SIP Panel, L</option>
               
 
          <option value={0.75}>0.75m</option>
