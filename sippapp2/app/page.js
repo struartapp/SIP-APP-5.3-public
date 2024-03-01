@@ -13,15 +13,14 @@ export default function App () {
 <div class="rounded overflow-hidden text-center  bg-clip-border bg-gradient-to-b p-6 from-yellow-200 to-white w-96 h-42 rounded-sd shadow-xl shadow-yellow-600 border-8 border-x-2 border-orange-800" style={{
     fontSize: '13px',   }} >     
     
-     <img class="w-full opacity-60" src="/240228_Colon_Cover-royal-app-cover.jpg" ></img>
+     <img class="w-full opacity-100" src="/240301_Colon_Cover-royal-app-front-coverAPP.jpg" ></img>
     <br />   
     <ul>
             <li>
             <div class = "flex justify-center py-4" >       
             <div class=" h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-200 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white">
-            <Link href="/Home"><strong>STRUCTURALLY INSULATED PANELS (SIPS)<br />
-            UNIVERSAL SELECTION APP FOR 'SIPS' 
-            ROOF AND FLOOR PANELS </strong><br />Navigate to Home Page.</Link> </div></div>
+            <Link href="/Home">UNIVERSAL SELECTION APP FOR 'SIPS' 
+            ROOF AND FLOOR PANELS <br /><br />Navigate to Home Page.</Link> </div></div>
          </li>
                      </ul> 
    

@@ -17,9 +17,9 @@ export default function App () {
             <div class = "flex justify-center py-4" >       
             <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 style" style={{
     fontSize: '17px',   }} >
-            <Link href=""><strong>STRUCTURALLY INSULATED PANELS (SIPS)<br />
+            <Link href="">STRUCTURALLY INSULATED PANELS (SIPS)<br />
             UNIVERSAL SELECTION APP FOR 'SIPS' 
-            ROOF AND FLOOR PANELS </strong></Link> </div></div>
+            ROOF AND FLOOR PANELS </Link> </div></div>
          </li>
        
             </ul>
@@ -42,15 +42,15 @@ export default function App () {
          <ul>
             <li>
             <div class = "flex justify-center py-4" >       
-            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
+            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-500 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
     fontSize: '17px',   }} >
-            <Link href="/Floordeflection"><strong>Navigate to Floor Panel Selection</strong></Link> </div></div>
+            <Link href="/Floordeflection">Navigate to Floor Panel Selection</Link> </div></div>
          </li>
          <li>
          <div class = "flex justify-center py-4 " >       
-         <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
+         <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-500 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
     fontSize: '17px',   }} >
-            <Link href="/Deflection"><strong>Navigate to Roof Panel Selection</strong></Link> </div></div>
+            <Link href="/Deflection">Navigate to Roof Panel Selection</Link> </div></div>
             </li>
             </ul>
       

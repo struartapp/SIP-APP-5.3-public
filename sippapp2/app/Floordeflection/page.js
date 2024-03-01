@@ -149,8 +149,8 @@ export default function Validate() {
             <div class = "flex justify-center py-4" >       
             <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 style" style={{
     fontSize: '17px',   }} >
-            <Link href=""><strong>STRUCTURALLY INSULATED PANELS (SIPS)<br />
-              FLOOR PANEL SELECTION</strong></Link> </div></div>
+            <Link href="">STRUCTURALLY INSULATED PANELS (SIPS)<br />
+              FLOOR PANEL SELECTION</Link> </div></div>
          </li>
        
             </ul>
@@ -163,15 +163,15 @@ export default function Validate() {
           <ul>
             <li>
             <div class = "flex justify-center py-4" >       
-            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
+            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-500 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
     fontSize: '17px',   }} >
-            <Link href="/Home"><strong>Navigate to Home Page</strong></Link> </div></div>
+            <Link href="/Home">Navigate to Home Page</Link> </div></div>
          </li>
          <li>
          <div class = "flex justify-center py-4 " >       
-         <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
+         <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-500 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
     fontSize: '17px',   }} >
-            <Link href="/Deflection"><strong>Navigate to Roof Panel Selection</strong></Link> </div></div>
+            <Link href="/Deflection">Navigate to Roof Panel Selection</Link> </div></div>
             </li>
             </ul>
             </div>   </div>
@@ -179,11 +179,12 @@ export default function Validate() {
 <br />
   
   <div class="px-6 py-4 flex justify-center">
-            <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-200 to-white w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
+            <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-200 p-3 to-white w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
   <img class="w-full " src="/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
  
       <form name="input_form" onSubmit={(e) => { e.preventDefault(); handleCalculate(); }}>
-      <select id="depth" className="relative left-2 bottom-3 font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6" onChange={handleCalculate}>
+      <select id="depth" class="max-w-sm h-12 p-1 t-6 rounded overflow-hidden bg-gradient-to-b from-white to-yellow-400 w-80 shadow-xl shadow-yellow-600  border-orange-800  style" style={{
+    fontSize: '15px',   }}  onChange={handleCalculate}>
         <option value="" disabled selected>Select Thickness (depth) of SIP Panel, d</option>
 
          <option value={97.0}>97mm SIPIt Scotland</option>
@@ -206,7 +207,8 @@ export default function Validate() {
                      </select>
                      <br /><br />
                     {/* Other input fields and dropdowns */}
-                    <select id="facet" className="relative left-2 bottom-3 font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6" onChange={handleCalculate}>
+                    <select id="facet" class="max-w-sm h-12 p-1 t-6 rounded overflow-hidden bg-gradient-to-b from-white to-yellow-400 w-80 shadow-xl shadow-yellow-600  border-orange-800  style" style={{
+    fontSize: '15px',   }} onChange={handleCalculate}>
         <option value="" disabled selected>Select Face Thickness, t</option>
         <option value={11.0}>11mm SBS / SIPit Scotland</option>
         <option value={12.0}>12mm</option>
@@ -221,12 +223,13 @@ export default function Validate() {
 
                     <br /><br />
             <div class = "flex justify-center" >       
-            <div class="max-w-sm rounded overflow-hidden  bg-white   shadow-xl shadow-yellow-600 border-2 border-orange-800">
+            <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full" src="/240228-floor-panel-32-32-32.jpg" ></img>
   <img class="w-full" src="/240301_Two_or_more_span_panel_elevation-33.jpg" ></img><br />
   <div class="relative right-2 px-6 py-4">
                     <form name="input_form" onSubmit={(e) => { e.preventDefault(); handleCalculate(); }}>
-                    <select id="Loading" className="relative left-2 bottom-3 font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6" onChange={handleCalculate}>
+                    <select id="Loading" class="max-w-sm h-12 p-1 t-6 rounded overflow-hidden bg-gradient-to-b from-white to-yellow-400 w-80 shadow-xl shadow-yellow-600  border-orange-800  style" style={{
+    fontSize: '15px',   }} onChange={handleCalculate}>
          <option value="" disabled selected>Select Loading</option>
          <option value={50.0}>50kg/m² Domestic/Office light finishes</option>
          <option value={65.0}>65kg/m² Light + U/floor heating (no screed)</option>
@@ -253,10 +256,11 @@ export default function Validate() {
     
             <br />
             <div class ="flex justify-center">
-            <div class="max-w-sm rounded overflow-hidden  bg-white   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
+            <div class="max-w-sm rounded overflow-hidden bg-white bg-gradient-to-b  from-yellow-100 to-white    shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
   <div class="px-6 py-4">
-  <select id="sterm" className="font-semibold text-right bg-clip-border bg-gradient-to-b  from-blue-200 to-white w-72 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6" onChange={handleCalculate}>
+  <select id="sterm" class="max-w-sm h-12 p-1 t-6 rounded overflow-hidden bg-gradient-to-b from-white to-yellow-400 w-80 shadow-xl shadow-yellow-600  border-orange-800  style" style={{
+    fontSize: '15px',   }}  onChange={handleCalculate}>
                     <option value="" disabled selected>Select Span of SIP Panel, L</option>
               
 
@@ -307,15 +311,15 @@ export default function Validate() {
                      
         <div>
         <div class ="flex justify-center">
-        <div class="max-w-sm rounded overflow-hidden  bg-white  0 shadow-xl shadow-yellow-600 border-2 border-orange-800">
+        <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white   0 shadow-xl shadow-yellow-600 border-2 border-orange-800">
   
   <div class="flex px-6 py-4">
 
-  <button className=" font-semibold text-center bg-clip-border bg-gradient-to-b from-red-400 to-white w-36 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-sky-700 hover:text-white" onClick={handleClear}>Clear</button>
+  <button class="max-w-sm h-10 p-2 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-red-500 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white" style={{ fontSize: '14px',   }} onClick={handleClear}><strong>Clear</strong></button>
   </div>
   <div class="flex px-6 py-1">
     <div className = "text-red-500 font-semibold border-blue-500" >
-      <p><i>It is strongly recommended for floors to have solid timber splines (i.e. reinforced)
+      <p><i>It is strongly recommended for floors to have solid timber splines (i.e. reinforced)<br />
         in case of panel damp degredation or damage from use.</i>
       </p>
       </div></div>
