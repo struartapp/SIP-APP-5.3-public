@@ -12,50 +12,56 @@ export default function App () {
 
 <div class="rounded overflow-hidden text-center  bg-clip-border bg-gradient-to-b p-6 from-yellow-200 to-white w-96 h-42 rounded-sd shadow-xl shadow-yellow-600 border-8 border-x-2 border-orange-800" style={{
     fontSize: '17px',   }} >     
-    
-    {/* <img class="w-full opacity-40" src="/240228_Colon_Cover-royal-app-cover.jpg" ></img>
-    <br />   */}
-  
-    <ul>
+     <ul>
             <li>
             <div class = "flex justify-center py-4" >       
             <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 style" style={{
     fontSize: '17px',   }} >
             <Link href=""><strong>STRUCTURALLY INSULATED PANELS (SIPS)<br />
-            UNIVERSAL SELECTION APP FOR 'SIPS' <br />
+            UNIVERSAL SELECTION APP FOR 'SIPS' 
             ROOF AND FLOOR PANELS </strong></Link> </div></div>
          </li>
        
             </ul>
-
+ 
+    <img class="w-full opacity-40" src="/240228_Colon_Cover-royal-app-cover.jpg" ></img>
+    <br />   
+  
+  
               
         <p><strong>  For end-users, architects and estimators, 
          without structural knowledge.<br /><br />
          <i>App design: Hugh Morrison </i></strong></p> 
          
-        
         <ul>
           <li>
             <div class ="text-red-600 font-bold">
           <Link href="https://struartapp.com/">www.struartapp.com</Link></div>
           </li>
          </ul>
-        
-          <ul>
+         <ul>
             <li>
             <div class = "flex justify-center py-4" >       
-            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-200 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white">
-            <Link href="/Home">Navigate to Home Page.</Link> </div></div>
+            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
+    fontSize: '17px',   }} >
+            <Link href="/Floordeflection"><strong>Navigate to Floor Panel Selection</strong></Link> </div></div>
          </li>
-                     </ul>
-                     </div>   </div>
+         <li>
+         <div class = "flex justify-center py-4 " >       
+         <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
+    fontSize: '17px',   }} >
+            <Link href="/Deflection"><strong>Navigate to Roof Panel Selection</strong></Link> </div></div>
+            </li>
+            </ul>
+      
+            </div>   </div>
 <br />
 
 
 
            
             <div class = "flex justify-center" >       
-            <div class="max-w-sm  rounded overflow-hidden p-3 bg-gradient-to-b  from-white to-yellow-200 w-96 shadow-xl shadow-yellow-600 border-2 border-orange-800">
+            <div class="max-w-sm rounded overflow-hidden p-3 bg-gradient-to-b  from-white to-yellow-200 w-96 shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full opacity-80" src="/app-background.jpg" ></img>
  
   <br />

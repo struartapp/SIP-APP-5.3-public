@@ -37,7 +37,7 @@ export default function Validate() {
 
       const AcG = 2.3 * 1000 * (d - 2 * t)
       const EI = 3800 * 1000 * (Math.pow(d, 3) - Math.pow(d - 2 * t, 3)) / 12
-      const EIREIN = 0.35 * 100 * 11000 * (Math.pow(d - 2 * t, 3)) / 12
+      const EIREIN = 100 * 11000 * (Math.pow(d - 2 * t, 3)) / 12
       const LSmm = s * 1000 / Math.cos(p / 57)
       const WS = l * Math.cos(p / 57) / 100
       const BEFF = Math.tanh(1.57 * Math.sqrt(3800 / (3800 / 2 / (1 + .24))) * (1200 - 100) / (LSmm)) / ((1.57 * 1 / LSmm) * Math.sqrt(3800 / (3800 / 2 / (1 + .24))))
@@ -47,7 +47,7 @@ export default function Validate() {
       //const Deflection = 5.5 * 10 * Math.pow(s, 2) / 8 / Vst / (Math.cos(p / 57)) 
      //Deflection = (3.25 * 5 *1e10 * Math.pow((s / Math.cos(p / 57)),4) / 384 / EI) 
      
-     const Deflection = 3.3 * 5 * WS * Math.pow(LSmm, 4) / 384 / EI + 6.7 * WS * Math.pow(LSmm, 2) / 8 / AcG
+     const Deflection = 3.3 * 5 * WS * Math.pow(LSmm, 4) / 384 / EI + 8 * WS * Math.pow(LSmm, 2) / 8 / AcG
      const REINDeflection = 1.2 * 5 * WS * Math.pow(LSmm, 4) / 384 / (BEFF * EI / 3.3 / 1000 + EIREIN / 1.8) + WS * Math.pow(LSmm, 2) * (1 + 0.8) / 8 / (100 * (d - 2 * t)) / 690
      const REINDeflection2SP = 0.6 * REINDeflection
      const D2SPAN = 0.6 * Deflection;
@@ -87,17 +87,21 @@ export default function Validate() {
         // Display the result
         
          // Display the results
-      // document.getElementById("depth").value = `depth: ${AcG.toFixed(2)}`
-    //   document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
-    // document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
-    // document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
-    // document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
-    // document.getElementById("resultWS").textContent = `WS: ${WS.toFixed(2)}`;
-    // document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF.toFixed(2)}`;
-    // document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection.toFixed(2)}`;
-    // document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection.toFixed(2)}`;
-    // document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
-    // document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
+
+      document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
+    document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
+    document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
+    document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
+    document.getElementById("resultWS").textContent = `WS: ${WS.toFixed(2)}`;
+    document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF.toFixed(2)}`;
+    document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection.toFixed(2)}`;
+    document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection.toFixed(2)}`;
+    document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
+    document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
+    
+   
+    
+
 
     };
 
@@ -132,30 +136,42 @@ export default function Validate() {
 <div class=" px-6 py-6 flex justify-center">
 <div class="rounded overflow-hidden text-center  bg-clip-border bg-gradient-to-b p-3 from-yellow-200 to-white w-96 h-42 rounded-sd shadow-xl shadow-yellow-600 border-8 border-x-2 border-orange-800" style={{
     fontSize: '17px',   }} >     
-          <p><strong>STRUCTURALLY INSULATED PANELS (SIPS)<br />
-              ROOF PANEL SELECTION</strong><br /></p>
+         <ul>
+            <li>
+            <div class = "flex justify-center py-4" >       
+            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 style" style={{
+    fontSize: '17px',   }} >
+            <Link href=""><strong>STRUCTURALLY INSULATED PANELS (SIPS)<br />
+              ROOF PANEL SELECTION</strong></Link> </div></div>
+         </li>
+       
+            </ul>
+
               <br />
               <div><p align = "center"> Enter parameters and calculate deflection. 
               Select Panel thickness (depth), face thickness,
-              loading, span and pitch. Results output below. <i>To navigate between pages <strong>click buttons below.</strong></i></p> </div> </div>   </div>
-          <ul>
+              loading, span and pitch. Results output below.</p> </div> 
+              <ul>
             <li>
-            <div class="px-6 py-1 flex justify-center"> 
-            < div className="w-24 rounded overflow-hidden font-semibold text-center bg-gradient-to-t from-blue-200 to-white h-7 rounded-sd shadow-xl shadow-yellow-600 border-2  border-orange-800 "> 
-            <Link href="/">Home Page</Link> </div></div>
+            <div class = "flex justify-center py-4" >       
+            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
+    fontSize: '17px',   }} >
+            <Link href="/Home"><strong>Navigate to Home Page</strong></Link> </div></div>
          </li>
          <li>
-            <div class="px-6 py-1 flex justify-center"> 
-            < div className="w-48 rounded overflow-hidden font-semibold text-center bg-gradient-to-t from-blue-200 to-white h-7 rounded-sd shadow-xl shadow-yellow-600 border-2  border-orange-800 "> 
-            <Link href="/Floordeflection">Floor Panel Selection</Link> </div></div>
-         </li>
+         <div class = "flex justify-center py-4 " >       
+         <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
+    fontSize: '17px',   }} >
+            <Link href="/Floordeflection"><strong>Navigate to Floor Panel Selection</strong></Link> </div></div>
+            </li>
             </ul>
-           
+            </div>   </div>
 <br />
   
   <div class="px-6 py-4 flex justify-center">
             <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-200 to-white w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
-  <img class="w-full " src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
+  <img class="w-full " src="/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
+
  
       <form name="input_form" onSubmit={(e) => { e.preventDefault(); handleCalculate(); }}>
       <select id="depth" className="relative left-2 bottom-3 font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6" onChange={handleCalculate}>
@@ -197,8 +213,9 @@ export default function Validate() {
                     <br /><br />
             <div class = " flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden  bg-white   shadow-xl shadow-yellow-600 border-2 border-orange-800">
-  {/* <img class="w-full" src="https://i.postimg.cc/bJRVNskd/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation.jpg" ></img> */}
-  <img class="w-full" src="https://i.postimg.cc/bJRVNskd/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation.jpg" ></img>
+  <img class="w-full" src="/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation_Fig 2.3.1 Slope Length of Panel copy.jpg" ></img>
+  <img class="w-full " src="/240301_Two_or_more_span_panel_elevation-33.jpg" ></img>
+  <br />
   <div class="relative right-2 px-6 py-4">
                     <form name="input_form" onSubmit={(e) => { e.preventDefault(); handleCalculate(); }}>
                     <select id="Loading" className="relative left-2 bottom-3 font-semibold text-right bg-clip-border bg-gradient-to-b from-blue-200 to-white w-64 h-7 rounded-sd shadow-xl shadow-blue-950/50 border-2 border-blue-500 hover:bg-yellow-100 hover:border-spacing-6" onChange={handleCalculate}>
@@ -311,23 +328,23 @@ export default function Validate() {
   </div>
          
  <div class="px-4 py-8">
-  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: SIP splines" type="text" id="Deflection" size={30} /> mm
+  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2 hover:border-2 hover:border-red-400 hover:bg-yellow-100" placeholder="Deflection: SIP splines" type="text" id="Deflection" size={30} /> mm
   <br />Deflection (Single Span)
   <br /><br />
-  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: SIP Splines Multispan" type="text" id="2SPDeflection" size={30} /> mm
+  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2 hover:border-2 hover:border-red-400 hover:bg-yellow-100" placeholder="Deflection: SIP Splines Multispan" type="text" id="2SPDeflection" size={30} /> mm
   <br />Deflection (Two Span or multiple span)
   <br /><br />
-  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: Timber splines" type="text" id="REINDeflection" size={30} /> mm
+  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2 hover:border-2 hover:border-red-400 hover:bg-yellow-100" placeholder="Deflection: Timber splines" type="text" id="REINDeflection" size={30} /> mm
   <br />Reinforced Deflection (Reinforced with solid timber splines in joints)
   <br /><br />
-  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2" placeholder="Deflection: Timber splines Multispan" type="text" id="REINDeflection2SP" size={30} /> mm
+  <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2 hover:border-2 hover:border-red-400 hover:bg-yellow-100" placeholder="Deflection: Timber splines Multispan" type="text" id="REINDeflection2SP" size={30} /> mm
   <br />Reinforced Deflection (Two Span or Multiple Span &amp; Reinforced with solid timber splines in joints)
-
+  <img class="w-full " src="/240301_Panel_Sections_Standard_Reinforced.jpg" ></img>
 
   </div></div></div>
 
 
-            {/* Result output
+            Result output
             <p>  Result output</p>
             <div id="results">
                 <div id="resultAcG"></div>
@@ -341,10 +358,9 @@ export default function Validate() {
                 <div id="resultREINDeflection"></div>
                 <div id="resultREINDeflection2SP"></div>
                 <div id="resultDHIGH"></div>
-                <div id="resultDHIGH1"></div>
-                <div id="resultDHIGH2"></div>
                 <div id="resultD2SPREIN"></div>
-            </div> */}
+                
+            </div>
             
             </div></div>
         <br />
