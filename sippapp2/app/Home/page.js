@@ -24,19 +24,19 @@ export default function App () {
        
             </ul>
  
-    <img class="w-full opacity-40" src="/240228_Colon_Cover-royal-app-cover.jpg" ></img>
+    {/* <img class="w-full opacity-40" src="/240228_Colon_Cover-royal-app-cover.jpg" ></img> */}
     <br />   
   
   
               
-        <p><strong>  For end-users, architects and estimators, 
+        <p> For end-users, architects and estimators, 
          without structural knowledge.<br /><br />
-         <i>App design: Hugh Morrison </i></strong></p> 
+         <i>App design: Hugh Morrison </i></p> 
          
         <ul>
           <li>
             <div class ="text-red-600 font-bold">
-          <Link href="https://struartapp.com/">www.struartapp.com</Link></div>
+          <Link href="https://struartapp.com/" class ="hover:text-white">www.struartapp.com</Link></div>
           </li>
          </ul>
          <ul>
@@ -72,7 +72,7 @@ export default function App () {
   
     <br /><div class = "flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3  bg-gradient-to-b from-white to-yellow-200  w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800">
-  <img class="w-full " src="/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation.jpg" ></img>
+  <img class="w-full " src="/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation_Fig 2.3.1 Slope Length of Panel copy.jpg" ></img>
  <br />
   <strong>LOADING (SELF WEIGHT AND FINISHES):</strong> <br />Loading does not include any imposed (live) loads: comprising all loading which results from snow or wind for roofs or furniture, partitions or occupants acting on floors.<br />
   These are omitted for initial SIP panel selection, on the basis that the most influential 
