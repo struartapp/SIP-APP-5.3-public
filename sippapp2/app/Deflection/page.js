@@ -29,13 +29,11 @@ export default function Validate() {
         const s = parseFloat(document.getElementById("sterm").value);
         const p = parseFloat(document.getElementById("pterm").value);
 
-        // l = document.forms["input_form"]["load"].value;
-        // d = document.forms["input_form"]["depth"].value;
-        // t = document.forms["input_form"]["facet"].value;
+       
 
         
 
-      const AcG = 2.3 * 1000 * (d - 2 * t)
+      const AcG = 2.0 * Math.pow((d-t),2)/Math.pow((d-2*t),2) * 1000 * (d - 2 * t)
       const EI = 3800 * 1000 * (Math.pow(d, 3) - Math.pow(d - 2 * t, 3)) / 12
       const EIREIN = 100 * 11000 * (Math.pow(d - 2 * t, 3)) / 12
       const LSmm = s * 1000 / Math.cos(p / 57)
@@ -57,7 +55,7 @@ export default function Validate() {
      const D2SPREIN = "PANEL INADEQUATE";
 
         // Calculate deflection bending and shear included
-        if (Deflection <= l * 1000 / 160 && Deflection <= 15) {
+        if (Deflection <= l * 1000 / 250 && Deflection <= 15) {
             document.getElementById("Deflection").value = Deflection.toFixed(1);
             document.getElementById("2SPDeflection").value = D2SPAN.toFixed(1);
             document.getElementById("REINDeflection").value = REINDeflection.toFixed(1);
@@ -88,7 +86,14 @@ export default function Validate() {
         
          // Display the results
 
-      document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
+        
+    
+         document.getElementById("resultd").textContent = `depth(mm): ${d.toFixed(2)}`;
+         document.getElementById("resultt").textContent = `face 't'(mm): ${t.toFixed(2)}`;
+         document.getElementById("resultl").textContent = `loading (kg/m²): ${l.toFixed(2)}`;
+         document.getElementById("results1").textContent = `span(m): ${s.toFixed(2)}`;
+         document.getElementById("resultp").textContent = `pitch(&deg;): ${p.toFixed(2)}`;
+    document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
     document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
     document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
     document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
@@ -99,8 +104,12 @@ export default function Validate() {
     document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
     document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
     
-   
-    
+    // console.log(document.getElementById("resultd"));
+    // console.log(document.getElementById("resultt"));
+    // console.log(document.getElementById("resultl"));
+    // console.log(document.getElementById("results"));
+    // console.log(document.getElementById("resultp"));
+       
 
 
     };
@@ -134,15 +143,15 @@ export default function Validate() {
       // <img src="https://i.postimg.cc/ydWm9H5c/231020-Colon-Cover-royal-paperback-APP-IMAGE-2.jpg" alt="Avatar" class="top w-full h-full opacity-5" /></div> */}
 
 <div class=" px-6 py-6 flex justify-center">
-<div class="rounded overflow-hidden text-center  bg-clip-border bg-gradient-to-b p-3 from-yellow-200 to-white w-96 h-42 rounded-sd shadow-xl shadow-yellow-600 border-2 border-x-2 border-orange-800" style={{
+<div class="rounded overflow-hidden text-center  bg-clip-border bg-gradient-to-b p-3 from-yellow-200 to-white w-96 h-42 rounded-sd shadow-xl shadow-yellow-600 border-2 border-x-2 border-orange-800 " style={{
     fontSize: '17px',   }} >     
          <ul>
             <li>
             <div class = "flex justify-center py-4" >       
-            <div class ="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 style" style={{
+            <div class ="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 style animate-spin-fast" style={{
     fontSize: '17px',   }} >
             <Link href="">STRUCTURALLY INSULATED PANELS (SIPS)<br />
-              ROOF PANEL SELECTION</Link> </div></div>
+              <strong>ROOF</strong> PANEL SELECTION</Link> </div></div>
          </li>
        
             </ul>
@@ -168,7 +177,7 @@ export default function Validate() {
             </div>   </div>
 <br />
   
-  <div class="px-6 py-4 flex justify-center">
+  <div class="px-2 py-1 flex justify-center">
             <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white w-96 p-3   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
   <img class="w-full " src="/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
 
@@ -213,12 +222,12 @@ export default function Validate() {
 
 
                     <br /><br />
-            <div class = " flex justify-center" >       
-            <div class="max-w-sm rounded overflow-hidden   bg-white bg-gradient-to-b  from-yellow-100 to-white  shadow-xl shadow-yellow-600 border-2 border-orange-800">
+                    <div class="px-1 py-1 flex justify-center">
+            <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white w-96 p-3   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
   <img class="w-full" src="/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation_Fig 2.3.1 Slope Length of Panel copy.jpg" ></img>
   <img class="w-full " src="/240301_Two_or_more_span_panel_elevation-33.jpg" ></img>
   <br />
-  <div class="relative right-2 px-6 py-4">
+  <div class=" px-2 py-4">
                     <form name="input_form" onSubmit={(e) => { e.preventDefault(); handleCalculate(); }}>
                     <select id="Loading" class="max-w-sm h-12 p-2 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-400 w-80 shadow-xl shadow-yellow-600  border-orange-800  style" style={{
     fontSize: '15px',   }}  onChange={handleCalculate}>
@@ -247,10 +256,10 @@ export default function Validate() {
              
     
             <br />
-            <div class =" flex justify-center">
-            <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
+            <div class="px-2 py-1 flex justify-center">
+            <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white w-96 p-3   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
-  <div class="px-6 py-4">
+  <div class="px-1 py-4">
   <select id="sterm" class="max-w-sm h-12 p-2 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-yellow-400 w-80 shadow-xl shadow-yellow-600  border-orange-800  style" style={{
     fontSize: '15px',   }}  onChange={handleCalculate}>
                     <option value="" disabled selected>Select Span of SIP Panel, L</option>
@@ -263,6 +272,7 @@ export default function Validate() {
          <option value={1.75}>1.75m</option>
          <option value={2.00}>2.00m</option>
          <option value={2.25}>2.25m</option>
+         <option value={2.40}>2.40m</option>
          <option value={2.50}>2.50m</option>
          <option value={2.75}>2.75m</option>
          <option value={3.00}>3.00m</option>
@@ -324,15 +334,21 @@ export default function Validate() {
   
                      
         <div>
-        <div class ="flex justify-center">
-        <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white  0 shadow-xl shadow-yellow-600 border-2 border-orange-800">
+        <div class="px-1 py-2 flex justify-center">
+            <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white w-96 p-3   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
   <div class="flex px-6 py-4">
 
-  <button class="max-w-sm h-10 p-2 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-red-500 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white" style={{ fontSize: '14px',   }} onClick={handleClear}><strong>Clear</strong></button>
+  <button class="max-w-sm h-10 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-red-500 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white" style={{ fontSize: '14px',   }} onClick={handleClear}><strong>Clear</strong></button>
   </div>
-         
- <div class="px-4 py-8">
+  <div id="results" class="px-6 py-2">
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultd" > </div>
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultt"> </div>
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultl"></div>
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="results1"></div>
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultp"></div></div>
+  
+ <div class="px-4 py-4">
   <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-md w-56 h-7 pr-3 shadow-lg border-2 hover:border-2 hover:border-red-400 hover:bg-yellow-100" placeholder="Deflection: SIP splines" type="text" id="Deflection" size={30} /> mm
   <br />Deflection (Single Span)
   <br /><br />
@@ -349,9 +365,14 @@ export default function Validate() {
   </div></div></div>
 
 
-            Result output
+       
             <p>  Result output</p>
-            <div id="results">
+            <div id="results1">
+            <div id="resultd"></div>
+            <div id="resultt"></div>
+            <div id="results1"></div>
+            <div id="resultl"></div>
+            <div id="resultp"></div>
                 <div id="resultAcG"></div>
                 <div id="resultEI"></div>
                 <div id="resultEIREIN"></div>

@@ -27,7 +27,7 @@ export default function Validate() {
       // }
         
       
-      const AcG = 2.3 * 1000 * (d - 2 * t)
+      const AcG = 2.0 * Math.pow((d-t),2)/Math.pow((d-2*t),2) * 1000 * (d - 2 * t)
       const EI = 3800 * 1000 * (Math.pow(d, 3) - Math.pow(d - 2 * t, 3)) / 12
       const EIREIN = 100 * 11000 * (Math.pow(d - 2 * t, 3)) / 12
       const LSmm = s * 1000
@@ -55,7 +55,7 @@ export default function Validate() {
    
 
         // Calculate deflection bending and shear included
-        if (Deflection <= l * 1000 / 160 && Deflection <= 15 && DFST <=8 ) {
+        if (Deflection <= l * 1000 / 250 && Deflection <= 12 && DFST <=8 ) {
             document.getElementById("Deflection").value = Deflection.toFixed(1);
             document.getElementById("2SPDeflection").value = D2SPAN.toFixed(1);
             document.getElementById("REINDeflection").value = REINDeflection.toFixed(1);
@@ -63,20 +63,20 @@ export default function Validate() {
             // document.getElementById("DEFST").value = DEFST.toFixed(1);
         }
   
-        else if (D2SPAN <= l * 1000 / 250 && D2SPAN <= 15 && DFST2SP <= 8) {
+        else if (D2SPAN <= l * 1000 / 250 && D2SPAN <= 12 && DFST2SP <= 8) {
             document.getElementById("Deflection").value = DHIGH;
             document.getElementById("2SPDeflection").value = D2SPAN.toFixed(1);
             document.getElementById("REINDeflection").value = REINDeflection.toFixed(1);
             document.getElementById("REINDeflection2SP").value = REINDeflection2SP.toFixed(1);
           } 
                        
-            else if (REINDeflection <= l * 1000 / 250 && REINDeflection <= 15 && REINDFST <= 8) {
+            else if (REINDeflection <= l * 1000 / 250 && REINDeflection <= 12 && REINDFST <= 8) {
             document.getElementById("Deflection").value = DHIGH;
             document.getElementById("2SPDeflection").value = DHIGH1;
             document.getElementById("REINDeflection").value = REINDeflection.toFixed(1);
             document.getElementById("REINDeflection2SP").value = REINDeflection2SP.toFixed(1);
           }
-           else if (REINDeflection2SP <= l * 1000 / 250 && REINDeflection2SP <= 15 && REINDFST2SP <=8 ) {
+           else if (REINDeflection2SP <= l * 1000 / 250 && REINDeflection2SP <= 12 && REINDFST2SP <=8 ) {
             document.getElementById("Deflection").value = DHIGH;
             document.getElementById("2SPDeflection").value = DHIGH1;
             document.getElementById("REINDeflection").value = DHIGH2;
@@ -95,6 +95,12 @@ export default function Validate() {
         // Display the result
         
          // Display the results
+         document.getElementById("resultd").textContent = `depth(mm): ${d.toFixed(2)}`;
+         document.getElementById("resultt").textContent = `face 't'(mm): ${t.toFixed(2)}`;
+         document.getElementById("resultl").textContent = `loading (kg/m²): ${l.toFixed(2)}`;
+         document.getElementById("results1").textContent = `span(m): ${s.toFixed(2)}`;
+        
+         
          document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
          document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
          document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
@@ -147,10 +153,10 @@ export default function Validate() {
           <ul>
             <li>
             <div class = "flex justify-center py-4" >       
-            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 style" style={{
+            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-400 w-96 shadow-xl shadow-yellow-600  border-orange-800  animate-spin-fast " style={{
     fontSize: '17px',   }} >
             <Link href="">STRUCTURALLY INSULATED PANELS (SIPS)<br />
-              FLOOR PANEL SELECTION</Link> </div></div>
+            <strong>FLOOR</strong>PANEL SELECTION</Link> </div></div>
          </li>
        
             </ul>
@@ -165,7 +171,7 @@ export default function Validate() {
             <div class = "flex justify-center py-4" >       
             <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-500 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
     fontSize: '17px',   }} >
-            <Link href="/Home">Navigate to Home Page</Link> </div></div>
+            <Link href="/Home" >Navigate to Home Page</Link> </div></div>
          </li>
          <li>
          <div class = "flex justify-center py-4 " >       
@@ -178,7 +184,7 @@ export default function Validate() {
            
 <br />
   
-  <div class="px-6 py-4 flex justify-center">
+  <div class="px-2 py-1 flex justify-center">
             <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-200 p-3 to-white w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
   <img class="w-full " src="/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
  
@@ -222,11 +228,11 @@ export default function Validate() {
 
 
                     <br /><br />
-            <div class = "flex justify-center" >       
+            <div class = "px-1 py-2 flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full" src="/240228-floor-panel-32-32-32.jpg" ></img>
   <img class="w-full" src="/240301_Two_or_more_span_panel_elevation-33.jpg" ></img><br />
-  <div class="relative right-2 px-6 py-4">
+  <div class=" right-2 px-2 py-2">
                     <form name="input_form" onSubmit={(e) => { e.preventDefault(); handleCalculate(); }}>
                     <select id="Loading" class="max-w-sm h-12 p-1 t-6 rounded overflow-hidden bg-gradient-to-b from-white to-yellow-400 w-80 shadow-xl shadow-yellow-600  border-orange-800  style" style={{
     fontSize: '15px',   }} onChange={handleCalculate}>
@@ -238,7 +244,7 @@ export default function Validate() {
     </select>
     </form>
  
-    <i><strong>Input roof panel loading from options</strong></i>&nbsp;
+    <br /><i><strong>Input roof panel loading from options</strong></i>&nbsp;
   <br /> ● 50kg/m² - Typical timber joist floor loading.
   <br /> ● 65kg/m² - Typical with Underfloor heating (no screed).
   <br /> ● 150kg/m²- Typical with Underfloor heating and screed.
@@ -255,10 +261,10 @@ export default function Validate() {
              
     
             <br />
-            <div class ="flex justify-center">
-            <div class="max-w-sm rounded overflow-hidden bg-white bg-gradient-to-b  from-yellow-100 to-white    shadow-xl shadow-yellow-600 border-2 border-orange-800 ">
+            <div class = "px-1 py-2 flex justify-center" >       
+            <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   {/* <img class="w-full" src="https://i.postimg.cc/KzcCdds6/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img> */}
-  <div class="px-6 py-4">
+  <div class="px-2 py-4">
   <select id="sterm" class="max-w-sm h-12 p-1 t-6 rounded overflow-hidden bg-gradient-to-b from-white to-yellow-400 w-80 shadow-xl shadow-yellow-600  border-orange-800  style" style={{
     fontSize: '15px',   }}  onChange={handleCalculate}>
                     <option value="" disabled selected>Select Span of SIP Panel, L</option>
@@ -271,6 +277,7 @@ export default function Validate() {
          <option value={1.75}>1.75m</option>
          <option value={2.00}>2.00m</option>
          <option value={2.25}>2.25m</option>
+         <option value={2.40}>2.40m</option>
          <option value={2.50}>2.50m</option>
          <option value={2.75}>2.75m</option>
          <option value={3.00}>3.00m</option>
@@ -310,17 +317,23 @@ export default function Validate() {
   
                      
         <div>
-        <div class ="flex justify-center">
+        <div class ="px-1 py-2 flex justify-center">
         <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white   0 shadow-xl shadow-yellow-600 border-2 border-orange-800">
   
   <div class="flex px-6 py-4">
 
   <button class="max-w-sm h-10 p-2 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-red-500 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white" style={{ fontSize: '14px',   }} onClick={handleClear}><strong>Clear</strong></button>
   </div>
+  <div id="results" class="px-6 py-2">
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultd" > </div>
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultt"> </div>
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultl"></div>
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="results1"></div></div>
+    
   <div class="flex px-6 py-1">
     <div className = "text-red-500 font-semibold border-blue-500" >
-      <p><i>It is strongly recommended for floors to have solid timber splines (i.e. reinforced)<br />
-        in case of panel damp degredation or damage from use.</i>
+      <p><i>It is strongly recommended for floors<br /> to have solid timber splines (i.e. reinforced)
+        in case of panel damp <br />degredation or damage from use.</i>
       </p>
       </div></div>
  <div class="px-4 py-4">

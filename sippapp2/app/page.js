@@ -13,7 +13,7 @@ export default function App () {
 <div class="rounded overflow-hidden text-center  bg-clip-border bg-gradient-to-b p-6 from-yellow-200 to-white w-96 h-42 rounded-sd shadow-xl shadow-yellow-600 border-8 border-x-2 border-orange-800" style={{
     fontSize: '13px',   }} >     
     
-     <img class="w-full opacity-100" src="/240301_Colon_Cover-royal-app-front-coverAPP.jpg" ></img>
+     <img class="w-full opacity-100 animate-spin-slow " src="/240301_Colon_Cover-royal-app-front-coverAPP.jpg" ></img>
     <br />   
     <ul>
             <li>
@@ -33,7 +33,7 @@ export default function App () {
         <ul>
           <li>
             <div class ="text-red-600 font-bold">
-          <Link href="https://struartapp.com/">www.struartapp.com</Link></div>
+          <Link href="https://struartapp.com/" rel="noopener noreferrer" target="_blank">www.struartapp.com</Link></div>
           </li>
          </ul>
         

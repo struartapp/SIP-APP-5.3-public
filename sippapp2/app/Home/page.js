@@ -8,14 +8,14 @@ export default function App () {
     <main>
 
 
-<div class=" px-6 py-6 flex justify-center ">
+<div class=" px-1 py-2 flex justify-center">
 
 <div class="rounded overflow-hidden text-center  bg-clip-border bg-gradient-to-b p-6 from-yellow-200 to-white w-96 h-42 rounded-sd shadow-xl shadow-yellow-600 border-8 border-x-2 border-orange-800" style={{
     fontSize: '17px',   }} >     
      <ul>
             <li>
             <div class = "flex justify-center py-4" >       
-            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 style" style={{
+            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-400 w-96 shadow-xl shadow-yellow-600  border-orange-800 animate-spin-fast " style={{
     fontSize: '17px',   }} >
             <Link href="">STRUCTURALLY INSULATED PANELS (SIPS)<br />
             UNIVERSAL SELECTION APP FOR 'SIPS' 
@@ -36,13 +36,13 @@ export default function App () {
         <ul>
           <li>
             <div class ="text-red-600 font-bold">
-          <Link href="https://struartapp.com/" class ="hover:text-white">www.struartapp.com</Link></div>
+          <Link href="https://struartapp.com/" rel="noopener noreferrer" target="_blank" class ="hover:text-white">www.struartapp.com</Link></div>
           </li>
          </ul>
          <ul>
             <li>
-            <div class = "flex justify-center py-4" >       
-            <div class="max-w-sm h-18 p-4 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-500 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
+            <div class = "px-1 py-2 flex justify-center" >       
+            <div class="max-w-sm h-18 p-2 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-orange-500 w-96 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white style" style={{
     fontSize: '17px',   }} >
             <Link href="/Floordeflection">Navigate to Floor Panel Selection</Link> </div></div>
          </li>
@@ -60,7 +60,7 @@ export default function App () {
 
 
            
-            <div class = "flex justify-center" >       
+            <div class = "px-1 py-2 flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3 bg-gradient-to-b  from-white to-yellow-200 w-96 shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full opacity-80" src="/app-background.jpg" ></img>
  
@@ -70,7 +70,7 @@ export default function App () {
     This will include all elements which make up the component: SIP panel self weight, battens, cladding and internal skimmed plasterboard, or other, finishes. <br />
     </p></div></div> 
   
-    <br /><div class = "flex justify-center" >       
+    <br /><div class = "px-1 py-2 flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3  bg-gradient-to-b from-white to-yellow-200  w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full " src="/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-App-Elevation_Fig 2.3.1 Slope Length of Panel copy.jpg" ></img>
  <br />
@@ -79,7 +79,7 @@ export default function App () {
   factor in the structural action of SIPs roof panels, and generally on floors, is the permanent sag under the action of self weight.<br />    </div></div>
 
   
-  <br /> <div class = "flex justify-center" >       
+  <br /> <div class = "px-1 py-2 flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3  bg-gradient-to-b  from-white to-yellow-200 w-96  shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <img class="w-full " src="/230113-SIPS-CHP2-images-Fig-2-3-2-Roof-Panel-Example-Bending-APP-Section.jpg" ></img>
  <br />
@@ -102,23 +102,28 @@ export default function App () {
  </p></div></div>
 <br />    
   
-<div class = "flex justify-center" >       
+<div class = "px-1 py-2 flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3  bg-gradient-to-b  from-white to-yellow-200 w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800">
             <img class="w-full " src="/240301_Two_or_more_span_panel_elevation-33.jpg" ></img>
   <br />
   <p><strong>CALCULATION:</strong>  Find resulting deflections by selecting input values.<br /><br />
+  <i>Note that the panel properties assumed <br />
+  are conservative, yielding marginally<br /> shorter spans than comparable
+  <br />manufacturers' load span tables.</i><br /><br />
   <i>If the following criteria are not met, or input values are missing, 
   the calculated deflection<br /> is shown as 
-  "PANEL INADEQUATE" <br /><br /></i>
+  <strong> "PANEL INADEQUATE"</strong> <br /><br /></i>
    ● Deflection is greater than a ratio<br />
    &nbsp;&nbsp; determined from: Span/deflection <br />
    &nbsp;&nbsp; greater than a value of 250 <br />
    &nbsp;&nbsp; (the limit to avoid plaster cracking).<br /><br />
-  ● Deflection is greater than 15mm:<br />&nbsp;&nbsp; 
+  ● Deflection is greater than 15mm for roofs:<br />&nbsp;&nbsp; 
+  (12mm for floors under permanent loading).<br />&nbsp;&nbsp; 
   Rule of thumb value based on experience.<br /><br />
-  ● Deflection of floor panels is greater than <br />&nbsp;&nbsp; 8mm:
-  Floor panels subject to resonance <br />&nbsp;&nbsp;&nbsp;or 'liveliness' if  
-  self weight deflection is <br />&nbsp;&nbsp; greater thancirca 8mm based on short term <br />&nbsp;&nbsp;&nbsp;panel properties.</p>
+  ● Deflection of floor panels based on<br />&nbsp;&nbsp; <i>stiffer,
+  instantaneous properties</i>,<br />&nbsp;&nbsp;  is greater than 8mm:
+  Floor panels <br />&nbsp;&nbsp;&nbsp;are subject to resonance or <i>'liveliness'</i>.
+  <br />&nbsp;&nbsp; which can cause discomfort.</p>
   
   
   <br />
@@ -128,7 +133,7 @@ export default function App () {
   </div></div>
 
 
-  <br /><div class = " flex justify-center" >       
+  <br /><div class = " px-1 py-2 flex justify-center" >       
             <div class="max-w-sm rounded overflow-hidden p-3 bg-gradient-to-b  from-white to-red-200 w-96   shadow-xl shadow-yellow-600 border-2 border-orange-800">
   <p><br /> <strong>DISCLAIMER: </strong>
 
