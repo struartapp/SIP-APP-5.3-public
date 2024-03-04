@@ -319,22 +319,23 @@ export default function Validate() {
         <div>
         <div class ="px-1 py-2 flex justify-center">
         <div class="max-w-sm rounded overflow-hidden  bg-white bg-gradient-to-b  from-yellow-100 to-white   0 shadow-xl shadow-yellow-600 border-2 border-orange-800">
-  
-  <div class="flex px-6 py-4">
-
-  <button class="max-w-sm h-10 p-2 t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-red-500 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white" style={{ fontSize: '14px',   }} onClick={handleClear}><strong>Clear</strong></button>
-  </div>
-  <div id="results" class="px-6 py-2">
-            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultd" > </div>
-            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultt"> </div>
-            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultl"></div>
-            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="results1"></div></div>
-    
-  <div class="flex px-6 py-1">
+        <div class="flex px-6 py-1">
     <div className = "text-red-500 font-semibold border-blue-500" >
       <p><i>It is strongly recommended for floors<br /> to have solid timber splines (i.e. reinforced)
         in case of panel damp <br />degredation or damage from use.</i>
       </p>
+  <div class="flex px-6 py-4">
+
+  <button class="max-w-sm h-10 p-2 text-black font-medium t-6 rounded overflow-hidden bg-gradient-to-b  from-white to-red-500 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white" style={{ fontSize: '14px',   }} onClick={handleClear}><strong>Clear</strong></button>
+  </div>
+  <div className = "text-black font-normal" >
+  <div id="results" class="px-6 py-2">
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultd" > </div>
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultt"> </div>
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultl"></div>
+            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="results1"></div></div></div>
+    
+ 
       </div></div>
  <div class="px-4 py-4">
   <input className="placeholder:text-red-800 text-center bg-stone-100  border-blue-800 rounded-sd w-72 h-7 pr-3 shadow-lg border-2 hover:border-2 hover:border-red-400 hover:bg-yellow-100" placeholder="Deflection: SIP splines" type="text" id="Deflection" size={30} /> mm
