@@ -101,21 +101,21 @@ export default function Validate() {
          document.getElementById("results1").textContent = `span(m): ${s.toFixed(2)}`;
         
          
-         document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
-         document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
-         document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
-         document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
-         document.getElementById("resultWS").textContent = `WS: ${WS.toFixed(2)}`;
-         document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF.toFixed(2)}`;
-         document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection.toFixed(2)}`;
-         document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection.toFixed(2)}`;
-         document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
-         document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
+    //      document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
+    //      document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
+    //      document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
+    //      document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
+    //      document.getElementById("resultWS").textContent = `WS: ${WS.toFixed(2)}`;
+    //      document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF.toFixed(2)}`;
+    //      document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection.toFixed(2)}`;
+    //      document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection.toFixed(2)}`;
+    //      document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
+    //      document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
 
-    document.getElementById("resultDFST").textContent = `DFST: ${DFST.toFixed(2)}`;
-    document.getElementById("resultREINDFST").textContent = `REINDFST: ${REINDFST.toFixed(2)}`;
-    document.getElementById("resultDFST2SP").textContent = `DFST2SP: ${DFST2SP.toFixed(2)}`;
-    document.getElementById("resultREINDFST2SP").textContent = `REINDFST2SP: ${REINDFST2SP.toFixed(2)}`;
+    // document.getElementById("resultDFST").textContent = `DFST: ${DFST.toFixed(2)}`;
+    // document.getElementById("resultREINDFST").textContent = `REINDFST: ${REINDFST.toFixed(2)}`;
+    // document.getElementById("resultDFST2SP").textContent = `DFST2SP: ${DFST2SP.toFixed(2)}`;
+    // document.getElementById("resultREINDFST2SP").textContent = `REINDFST2SP: ${REINDFST2SP.toFixed(2)}`;
     
   };
    
@@ -360,8 +360,8 @@ export default function Validate() {
   </div></div></div>
 
 
-            {/* Result output */}
-            <p>  Result output</p>
+          
+            {/* <p>  Result output</p>
             <div id="results">
                 <div id="resultAcG"></div>
                 <div id="resultEI"></div>
@@ -381,7 +381,7 @@ export default function Validate() {
                 <div id="resultREINDFST"></div>
                 <div id="resultDFST2SP"></div>
                 <div id="resultREINDFST2SP"></div>
-            </div>
+            </div> */}
             
             </div></div>
         <br />

@@ -93,16 +93,16 @@ export default function Validate() {
          document.getElementById("resultl").textContent = `loading (kg/m²):   ${l.toFixed(0)}`;
          document.getElementById("results1").textContent = `span(m): ${s.toFixed(2)}`;
          document.getElementById("resultp").textContent = `pitch(deg):   ${p.toFixed(0)}`;
-    document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
-    document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
-    document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
-    document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
-    document.getElementById("resultWS").textContent = `WS: ${WS.toFixed(2)}`;
-    document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF.toFixed(2)}`;
-    document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection.toFixed(2)}`;
-    document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection.toFixed(2)}`;
-    document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
-    document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
+    // document.getElementById("resultAcG").textContent = `ACG: ${AcG.toFixed(2)}`;
+    // document.getElementById("resultEI").textContent = `EI: ${EI.toFixed(2)}`;
+    // document.getElementById("resultEIREIN").textContent = `EIREIN: ${EIREIN.toFixed(2)}`;
+    // document.getElementById("resultLSmm").textContent = `LSmm: ${LSmm.toFixed(2)}`;
+    // document.getElementById("resultWS").textContent = `WS: ${WS.toFixed(2)}`;
+    // document.getElementById("resultBEFF").textContent = `BEFF: ${BEFF.toFixed(2)}`;
+    // document.getElementById("resultDeflection").textContent = `Deflection: ${Deflection.toFixed(2)}`;
+    // document.getElementById("resultREINDeflection").textContent = `REINDeflection: ${REINDeflection.toFixed(2)}`;
+    // document.getElementById("resultREINDeflection2SP").textContent = `REINDeflection2SP: ${REINDeflection2SP.toFixed(2)}`;
+    // document.getElementById("resultD2SPAN").textContent = `D2SPAN: ${D2SPAN.toFixed(2)}`;
     
     // console.log(document.getElementById("resultd"));
     // console.log(document.getElementById("resultt"));
@@ -372,7 +372,7 @@ export default function Validate() {
 
 
        
-            <p>  Result output</p>
+            {/* <p>  Result output</p>
             <div id="results1">
             <div id="resultd"></div>
             <div id="resultt"></div>
@@ -392,7 +392,7 @@ export default function Validate() {
                 <div id="resultDHIGH"></div>
                 <div id="resultD2SPREIN"></div>
                 
-            </div>
+            </div> */}
             
             </div></div>
         <br />
