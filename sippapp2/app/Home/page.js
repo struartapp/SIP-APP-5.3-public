@@ -65,7 +65,8 @@ export default function App () {
   <img class="w-full opacity-80" src="/app-background.jpg" ></img>
  
   <br />
-  <p>This is a simplified method which helps to select SIPs panels with orientated strand board faces (OSB). 
+  <p><strong>UNIVERSAL APP FOR PANEL SELECTION</strong><br /><br />Applicable to most SIPs panels with orientated strand board faces (OSB), whether Hemsec, SBS, Kingspan, SIPs Eco Panels, SIPIt Scotland, or other. It is independent of core material (PUR, EPX or XPS).
+  This is a simplified method which requires no technical knowlege to assist in panel selection at initial or concept stage of a project. <br /><br /> 
    In most instances the governing criterion for design is the permanent deflection or sag which occurs from the self weight of the built up roof or floor (loading). 
     This will include all elements which make up the component: SIP panel self weight, battens, cladding and internal skimmed plasterboard, or other, finishes. <br />
     </p></div></div> 

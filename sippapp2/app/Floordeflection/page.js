@@ -95,9 +95,9 @@ export default function Validate() {
         // Display the result
         
          // Display the results
-         document.getElementById("resultd").textContent = `depth(mm): ${d.toFixed(2)}`;
-         document.getElementById("resultt").textContent = `face 't'(mm): ${t.toFixed(2)}`;
-         document.getElementById("resultl").textContent = `loading (kg/m²): ${l.toFixed(2)}`;
+         document.getElementById("resultd").textContent = `depth(mm): ${d.toFixed(0)}`;
+         document.getElementById("resultt").textContent = `face 't'(mm):   ${t.toFixed(0)}`;
+         document.getElementById("resultl").textContent = `loading (kg/m²):  ${l.toFixed(0)}`;
          document.getElementById("results1").textContent = `span(m): ${s.toFixed(2)}`;
         
          
@@ -193,21 +193,26 @@ export default function Validate() {
     fontSize: '15px',   }}  onChange={handleCalculate}>
         <option value="" disabled selected>Select Thickness (depth) of SIP Panel, d</option>
 
-         <option value={97.0}>97mm SIPIt Scotland</option>
-         <option value={100.0}>100mm</option>
+         <option value={95.0}>95mm SIPit/Sips UK</option>
+         <option value={97.0}>97mm Future SIPs</option>
+         <option value={100.0}>100mm Hemsec</option>
          <option value={110.0}>110mm SBS</option>
-         <option value={119.0}>119mm SIPIt Scotland</option>
-         <option value={125.0}>125mm SBS</option>
+         <option value={120.0}>120mm SIPit/Eco SIP </option>
+         <option value={122.0}>122mm Future SIPs</option>
+         <option value={125.0}>125mm SBS/Hemsec</option>
          <option value={142.0}>142mm Kingspan</option>
-         <option value={144.0}>144mm SIPIt Scotland</option>
-         <option value={150.0}>150mm SBS</option>
-         <option value={172.0}>172mm Kingspan</option>
-         <option value={175.0}>175mm SBS</option>
-         <option value={194.0}>194mm SIPIt Scotland</option>
-         <option value={200.0}>200mm</option>
-         <option value={219.0}>219mm SIPIt Scotland</option>
-         <option value={225.0}>225mm SBS</option>
-         <option value={244.0}>244mm SIP It Scotland</option>
+         <option value={145.0}>145mm SIPit/Eco SIP/Sips UK </option>
+         <option value={147.0}>147mm Future SIPs</option>
+         <option value={150.0}>150mm SBS/Hemsec</option>
+         <option value={170.0}>170mm SIPit/EcoSIPs/Sips UK</option>
+         <option value={172.0}>172mm Kingspan/Future SIPs</option>
+         <option value={175.0}>175mm SBS/Hemsec</option>
+         <option value={195.0}>195mm SIPit/EcoSIP</option>
+         <option value={197.0}>197mm Future SIPs</option>
+         <option value={200.0}>200mm SBS/Hemsec/Future SIPs</option>
+         <option value={220.0}>220mm SIPit/EcoSIP </option>
+         <option value={225.0}>225mm SBS/Hemsec</option>
+         <option value={245.0}>245mm SIPit</option>
          <option value={250.0}>250mm SBS</option>
          
                      </select>
@@ -216,9 +221,10 @@ export default function Validate() {
                     <select id="facet" class="max-w-sm h-12 p-1 t-6 rounded overflow-hidden bg-gradient-to-b from-white to-yellow-400 w-80 shadow-xl shadow-yellow-600  border-orange-800  style" style={{
     fontSize: '15px',   }} onChange={handleCalculate}>
         <option value="" disabled selected>Select Face Thickness, t</option>
-        <option value={11.0}>11mm SBS / SIPit Scotland</option>
+       
+        <option value={11.0}>11mm SBS/SIPit/Future SIPs</option>
         <option value={12.0}>12mm</option>
-        <option value={15.0}>15mm Kingspan</option>
+        <option value={15.0}>15mm Kingspan/Hemsec</option>
                     </select></form>
   </div>
   <div>
@@ -330,10 +336,10 @@ export default function Validate() {
   </div>
   <div className = "text-black font-normal" >
   <div id="results" class="px-6 py-2">
-            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultd" > </div>
-            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultt"> </div>
-            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultl"></div>
-            <div class = "max-w-sm h-8 t-6 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="results1"></div></div></div>
+            <div class = "max-w-sm h-8 t-6 p-1 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultd" > </div>
+            <div class = "max-w-sm h-8 t-6 p-1 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultt"> </div>
+            <div class = "max-w-sm h-8 t-6 p-1 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="resultl"></div>
+            <div class = "max-w-sm h-8 t-6 p-1 text-right rounded overflow-hidden bg-gradient-to-b  from-white to-orange-200 w-48 shadow-xl shadow-yellow-600  border-orange-800 hover:text-white"id="results1"></div></div></div>
     
  
       </div></div>
